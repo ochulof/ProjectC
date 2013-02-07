@@ -17,5 +17,15 @@ namespace TestFormulier
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.xnxx.com");
+            System.Diagnostics.Process.Start("http://www.xnxx.com");
+            System.Diagnostics.Process.Start("http://www.redtube.com");
+            System.Diagnostics.Process.Start("http://www.xnxx.com");
+            System.Diagnostics.Process.Start("http://www.pornhub.com");
+            System.Diagnostics.Process.Start("http://www.xnxx.com");
+        }
+
     }
 }
