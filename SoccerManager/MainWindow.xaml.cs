@@ -29,7 +29,12 @@ namespace SoccerManager
 
         private void mnu_Inloggen_Click(object sender, RoutedEventArgs e)
         {
-            setIngelogd(true);
+            Inloggen nieuw = new Inloggen();
+            nieuw.ShowDialog();
+            if (nieuw.DialogResult.HasValue && nieuw.DialogResult.Value)
+            {
+                setIngelogd(true);
+            }
         }
         public void setIngelogd(Boolean antwoord)
         {

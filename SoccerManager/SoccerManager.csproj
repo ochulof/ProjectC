@@ -67,6 +67,9 @@
     <Compile Include="GespeeldeWedstrijd.Designer.cs">
       <DependentUpon>GespeeldeWedstrijd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inloggen.xaml.cs">
+      <DependentUpon>Inloggen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Keuze.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +100,10 @@
     <Compile Include="Wedstrijdschema.Designer.cs">
       <DependentUpon>Wedstrijdschema.cs</DependentUpon>
     </Compile>
+    <Page Include="Inloggen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
