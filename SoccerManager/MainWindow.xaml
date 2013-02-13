@@ -1,0 +1,40 @@
+﻿<Window x:Name="Soccer_Manager_" x:Class="SoccerManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Welkom bij Soccer Manager" Height="372.993" Width="520">
+    <Grid HorizontalAlignment="Left" Height="325" VerticalAlignment="Top" Width="520">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="mnu_hoofdmenu" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="510" Grid.ColumnSpan="2">
+            <MenuItem x:Name="mnu_Bestand" Header="Bestand">
+                <MenuItem x:Name="mnu_Inloggen" Header="Inloggen" HorizontalAlignment="Left" Width="200" ToolTip="Inloggen als administrator" Click="mnu_Inloggen_Click"/>
+                <MenuItem x:Name="mnu_Afmelden" Header="Afmelden" HorizontalAlignment="Left" Width="200" ToolTip="Uitloggen als administrator" Click="mnu_Afmelden_Click"/>
+                <MenuItem x:Name="mnu_Nieuw" Header="Nieuw" HorizontalAlignment="Left" Width="200">
+                    <MenuItem x:Name="mnu_nieuw_speler" Header="Speler" HorizontalAlignment="Left" Width="145" ToolTip="Maak nieuwe spelers" Click="mnu_nieuw_speler_Click"/>
+                    <MenuItem x:Name="mnu_nieuw_team" Header="Team" HorizontalAlignment="Left" Width="145" ToolTip="Maak een nieuw team" Click="mnu_nieuw_team_Click"/>
+                    <MenuItem x:Name="mnu_nieuw_wedstrijd" Header="Wedstrijd" HorizontalAlignment="Left" Width="145" ToolTip="Maak een nieuwe wedstrijd" Click="mnu_nieuw_wedstrijd_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="mnu_Wedstrijdschema" Header="Wedstrijdschema" HorizontalAlignment="Left" Width="200" ToolTip="Wedstrijdschema weergeven" Click="mnu_Wedstrijdschema_Click"/>
+                <MenuItem x:Name="mnu_teams" Header="Teams" HorizontalAlignment="Left" Width="200" ToolTip="Toon de teams" Click="mnu_teams_Click" />
+                <MenuItem x:Name="mnu_spelerslijst" Header="Spelerslijst" HorizontalAlignment="Left" Width="200" ToolTip="Toon de spelerslijst" Click="mnu_spelerslijst_Click"/>
+                <MenuItem x:Name="mnu_Finale" Header="Finales" HorizontalAlignment="Left" Width="200" ToolTip="Toon de finales" Click="mnu_Finale_Click"/>
+                <MenuItem x:Name="mnu_afsluiten" Header="Afsluiten" HorizontalAlignment="Left" Width="200" ToolTip="Sluit het programma af" Click="mnu_afsluiten_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnu_Help" Header="Help" ToolTip="Toon Hulp" Click="mnu_Help_Click"/>
+        </Menu>
+        <Button x:Name="btn_wedstrijdschema" Content="Wedstrijdschema" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon het wedstrijdschema" Click="btn_wedstrijdschema_Click"/>
+        <Button x:Name="btn_klassement" Content="Klassement" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon het klassement" Click="btn_klassement_Click"/>
+        <Button x:Name="btn_teams" Content="Teams" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon teams" Grid.Column="1" Click="btn_teams_Click"/>
+        <Button x:Name="btn_spelerslijst" Content="Spelerslijst" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon de spelerslijst" Grid.Column="1" Click="btn_spelerslijst_Click"/>
+        <Button x:Name="btn_nieuw_team" Content="Nieuw Team" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak een nieuw team" Click="btn_nieuw_team_Click"/>
+        <Button x:Name="btn_nieuwe_spelers" Content="Nieuwe spelers" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak nieuwe spelers" Grid.Column="1" Click="btn_nieuwe_spelers_Click"/>
+    </Grid>
+</Window>

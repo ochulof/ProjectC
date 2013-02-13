@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DF62391-F58F-4FC0-9E95-4CA1E7AFF737}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoccerManager</RootNamespace>
+    <AssemblyName>SoccerManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Finales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finales.Designer.cs">
+      <DependentUpon>Finales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GespeeldeWedstrijd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GespeeldeWedstrijd.Designer.cs">
+      <DependentUpon>GespeeldeWedstrijd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keuze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keuze.Designer.cs">
+      <DependentUpon>Keuze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klassement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klassement.Designer.cs">
+      <DependentUpon>Klassement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spelerslijst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spelerslijst.Designer.cs">
+      <DependentUpon>Spelerslijst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teams.Designer.cs">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wedstrijdschema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wedstrijdschema.Designer.cs">
+      <DependentUpon>Wedstrijdschema.cs</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nieuwe_Speler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nieuwe_Speler.Designer.cs">
+      <DependentUpon>Nieuwe_Speler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nieuwe_Wedstrijd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nieuwe_Wedstrijd.Designer.cs">
+      <DependentUpon>Nieuwe_Wedstrijd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nieuw_Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nieuw_Team.Designer.cs">
+      <DependentUpon>Nieuw_Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Finales.resx">
+      <DependentUpon>Finales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GespeeldeWedstrijd.resx">
+      <DependentUpon>GespeeldeWedstrijd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keuze.resx">
+      <DependentUpon>Keuze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klassement.resx">
+      <DependentUpon>Klassement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nieuwe_Speler.resx">
+      <DependentUpon>Nieuwe_Speler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nieuwe_Wedstrijd.resx">
+      <DependentUpon>Nieuwe_Wedstrijd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nieuw_Team.resx">
+      <DependentUpon>Nieuw_Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spelerslijst.resx">
+      <DependentUpon>Spelerslijst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teams.resx">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wedstrijdschema.resx">
+      <DependentUpon>Wedstrijdschema.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
