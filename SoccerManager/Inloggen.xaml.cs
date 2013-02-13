@@ -29,9 +29,22 @@ namespace SoccerManager
 
         private void btn_Inloggen_Click(object sender, RoutedEventArgs e)
         {
-     
-                        DialogResult = true;
+            string connStr = "Data Source=.\\SQLEXPRESS1;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
+            SqlConnection con = new SqlConnection(connStr);
 
+            con.Open();
+
+           string str = "select count(*)from Users where Gebruikersnaam='" + txt_Gebruikersnaam.Text + "' and Paswoord ='" + txt_Paswoord.Text +"'";
+
+            SqlCommand com = new SqlCommand(str, con);
+
+            int count = Convert.ToInt32(com.ExecuteScalar());
+            if (count > 0)
+            {
+                DialogResult = true;
+            }
+            else
+                MessageBox.Show("foute inloggegevens");
                   
         }
     }
