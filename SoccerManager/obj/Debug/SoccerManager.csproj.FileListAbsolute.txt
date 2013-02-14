@@ -22,3 +22,5 @@ c:\users\wim\documents\visual studio 2012\Projects\SoccerManager\SoccerManager\o
 c:\users\wim\documents\visual studio 2012\Projects\SoccerManager\SoccerManager\obj\Debug\SoccerManager.Wedstrijdschema.resources
 C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager\obj\Debug\Inloggen.baml
 C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager\obj\Debug\Inloggen.g.cs
+F:\Github\ProjectC\SoccerManager\obj\Debug\SoccerManager.exe
+F:\Github\ProjectC\SoccerManager\obj\Debug\SoccerManager.pdb
