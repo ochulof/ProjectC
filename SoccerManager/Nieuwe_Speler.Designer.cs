@@ -465,6 +465,7 @@
             this.btn_toevoegen.TabIndex = 96;
             this.btn_toevoegen.Text = "Toevoegen";
             this.btn_toevoegen.UseVisualStyleBackColor = true;
+            this.btn_toevoegen.Click += new System.EventHandler(this.btn_toevoegen_Click);
             // 
             // label1
             // 

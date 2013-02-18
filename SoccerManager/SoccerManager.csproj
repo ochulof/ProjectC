@@ -37,6 +37,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +83,11 @@
     </Compile>
     <Compile Include="Klassement.Designer.cs">
       <DependentUpon>Klassement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SoccerWebservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Spelerslijst.cs">
       <SubType>Form</SubType>
@@ -183,11 +190,34 @@
     <EmbeddedResource Include="Wedstrijdschema.resx">
       <DependentUpon>Wedstrijdschema.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Service References\SoccerWebservice\SoccerManager_Webservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SoccerWebservice\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoccerWebservice\SoccerManager_Webservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoccerWebservice\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoccerWebservice\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoccerWebservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

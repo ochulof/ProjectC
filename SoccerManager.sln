@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerManager", "SoccerManager\SoccerManager.csproj", "{7DF62391-F58F-4FC0-9E95-4CA1E7AFF737}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98C4D957-1B60-474F-AC50-D420BB74413A} = {98C4D957-1B60-474F-AC50-D420BB74413A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerManager_Webservice", "SoccerManager_Webservice\SoccerManager_Webservice.csproj", "{98C4D957-1B60-474F-AC50-D420BB74413A}"
 EndProject

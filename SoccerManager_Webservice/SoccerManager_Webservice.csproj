@@ -58,14 +58,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SoccerManager_Webservice.asmx" />
+    <Content Include="test.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatalaagSoccerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoccerManager_Webservice.asmx.cs">
       <DependentUpon>SoccerManager_Webservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="test.asmx.cs">
+      <DependentUpon>test.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

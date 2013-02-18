@@ -1,0 +1,4 @@
+C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager_Webservice\bin\SoccerManager_Webservice.dll
+C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager_Webservice\bin\SoccerManager_Webservice.pdb
+C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.dll
+C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.pdb
