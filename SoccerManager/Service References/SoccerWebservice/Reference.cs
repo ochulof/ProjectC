@@ -9,156 +9,32 @@
 //------------------------------------------------------------------------------
 
 namespace SoccerManager.SoccerWebservice {
+    using System.Data;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SoccerWebservice.SoccerManager_WebserviceSoap")]
     public interface SoccerManager_WebserviceSoap {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        SoccerManager.SoccerWebservice.HelloWorldResponse HelloWorld(SoccerManager.SoccerWebservice.HelloWorldRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string HelloWorld();
         
-        // CODEGEN: Generating message contract since element name voornaam from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddSpelerGegevens", ReplyAction="*")]
-        SoccerManager.SoccerWebservice.AddSpelerGegevensResponse AddSpelerGegevens(SoccerManager.SoccerWebservice.AddSpelerGegevensRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool AddSpelerGegevens(string voornaam, string naam, string team);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public SoccerManager.SoccerWebservice.HelloWorldRequestBody Body;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTeamGegevens", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool AddTeamGegevens(string naam, string verantwoordelijke, string straat_nr, string postcode, string plaats, string telefoon, string email);
         
-        public HelloWorldRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTeamNaam", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool AddTeamNaam(string naam);
         
-        public HelloWorldRequest(SoccerManager.SoccerWebservice.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
-        
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public SoccerManager.SoccerWebservice.HelloWorldResponseBody Body;
-        
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(SoccerManager.SoccerWebservice.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
-        }
-        
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AddSpelerGegevensRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSpelerGegevens", Namespace="http://tempuri.org/", Order=0)]
-        public SoccerManager.SoccerWebservice.AddSpelerGegevensRequestBody Body;
-        
-        public AddSpelerGegevensRequest() {
-        }
-        
-        public AddSpelerGegevensRequest(SoccerManager.SoccerWebservice.AddSpelerGegevensRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AddSpelerGegevensRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string voornaam;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string naam;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string team;
-        
-        public AddSpelerGegevensRequestBody() {
-        }
-        
-        public AddSpelerGegevensRequestBody(string voornaam, string naam, string team) {
-            this.voornaam = voornaam;
-            this.naam = naam;
-            this.team = team;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AddSpelerGegevensResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSpelerGegevensResponse", Namespace="http://tempuri.org/", Order=0)]
-        public SoccerManager.SoccerWebservice.AddSpelerGegevensResponseBody Body;
-        
-        public AddSpelerGegevensResponse() {
-        }
-        
-        public AddSpelerGegevensResponse(SoccerManager.SoccerWebservice.AddSpelerGegevensResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class AddSpelerGegevensResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool AddSpelerGegevensResult;
-        
-        public AddSpelerGegevensResponseBody() {
-        }
-        
-        public AddSpelerGegevensResponseBody(bool AddSpelerGegevensResult) {
-            this.AddSpelerGegevensResult = AddSpelerGegevensResult;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectTeamNaam", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectTeamNaam();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -188,31 +64,24 @@ namespace SoccerManager.SoccerWebservice {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoccerManager.SoccerWebservice.HelloWorldResponse SoccerManager.SoccerWebservice.SoccerManager_WebserviceSoap.HelloWorld(SoccerManager.SoccerWebservice.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
-        }
-        
         public string HelloWorld() {
-            SoccerManager.SoccerWebservice.HelloWorldRequest inValue = new SoccerManager.SoccerWebservice.HelloWorldRequest();
-            inValue.Body = new SoccerManager.SoccerWebservice.HelloWorldRequestBody();
-            SoccerManager.SoccerWebservice.HelloWorldResponse retVal = ((SoccerManager.SoccerWebservice.SoccerManager_WebserviceSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoccerManager.SoccerWebservice.AddSpelerGegevensResponse SoccerManager.SoccerWebservice.SoccerManager_WebserviceSoap.AddSpelerGegevens(SoccerManager.SoccerWebservice.AddSpelerGegevensRequest request) {
-            return base.Channel.AddSpelerGegevens(request);
+            return base.Channel.HelloWorld();
         }
         
         public bool AddSpelerGegevens(string voornaam, string naam, string team) {
-            SoccerManager.SoccerWebservice.AddSpelerGegevensRequest inValue = new SoccerManager.SoccerWebservice.AddSpelerGegevensRequest();
-            inValue.Body = new SoccerManager.SoccerWebservice.AddSpelerGegevensRequestBody();
-            inValue.Body.voornaam = voornaam;
-            inValue.Body.naam = naam;
-            inValue.Body.team = team;
-            SoccerManager.SoccerWebservice.AddSpelerGegevensResponse retVal = ((SoccerManager.SoccerWebservice.SoccerManager_WebserviceSoap)(this)).AddSpelerGegevens(inValue);
-            return retVal.Body.AddSpelerGegevensResult;
+            return base.Channel.AddSpelerGegevens(voornaam, naam, team);
+        }
+        
+        public bool AddTeamGegevens(string naam, string verantwoordelijke, string straat_nr, string postcode, string plaats, string telefoon, string email) {
+            return base.Channel.AddTeamGegevens(naam, verantwoordelijke, straat_nr, postcode, plaats, telefoon, email);
+        }
+        
+        public bool AddTeamNaam(string naam) {
+            return base.Channel.AddTeamNaam(naam);
+        }
+        
+        public System.Data.DataSet SelectTeamNaam() {
+            return base.Channel.SelectTeamNaam();
         }
     }
 }

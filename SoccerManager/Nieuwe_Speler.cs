@@ -12,12 +12,12 @@ namespace SoccerManager
     public partial class Nieuwe_Speler : Form
     {
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
-        DataSet dsAddress;
          public System.Windows.Forms.TextBox[] tekstvakken;
-
+         DataSet dsSoccer;
         public Nieuwe_Speler()
         {
             InitializeComponent();
+            voegTeamsToe();
              tekstvakken = new System.Windows.Forms.TextBox[20];
             tekstvakken[0] = textBox1;
             tekstvakken[1] = textBox2;
@@ -52,6 +52,20 @@ namespace SoccerManager
             
 
         }
+
+        private void voegTeamsToe()
+        {
+            List<string> teams = new List<string>();
+
+            dsSoccer = wsSoccer.SelectTeamNaam();
+            this.cmb_team.DataSource = dsSoccer.Tables[0];
+            this.cmb_team.DisplayMember = "naam";
+            this.cmb_team.ValueMember = "naam";
+
+
+        }
+
+       
         
     }
 }

@@ -68,11 +68,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_annuleren = new System.Windows.Forms.Button();
             this.btn_toevoegen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Speler = new System.Windows.Forms.Label();
+            this.cmb_team = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox20
@@ -435,15 +435,6 @@
             this.textBox1.Size = new System.Drawing.Size(161, 20);
             this.textBox1.TabIndex = 74;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.comboBox1.Location = new System.Drawing.Point(385, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 21);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 98;
-            // 
             // btn_annuleren
             // 
             this.btn_annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -487,11 +478,20 @@
             this.lbl_Speler.TabIndex = 82;
             this.lbl_Speler.Text = "Nieuwe Speler";
             // 
+            // cmb_team
+            // 
+            this.cmb_team.FormattingEnabled = true;
+            this.cmb_team.Location = new System.Drawing.Point(398, 120);
+            this.cmb_team.Name = "cmb_team";
+            this.cmb_team.Size = new System.Drawing.Size(121, 21);
+            this.cmb_team.TabIndex = 119;
+            // 
             // Nieuwe_Speler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 593);
+            this.Controls.Add(this.cmb_team);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
@@ -532,7 +532,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_annuleren);
             this.Controls.Add(this.btn_toevoegen);
             this.Controls.Add(this.label1);
@@ -586,11 +585,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_annuleren;
         public System.Windows.Forms.Button btn_toevoegen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Speler;
+        private System.Windows.Forms.ComboBox cmb_team;
 
     }
 }

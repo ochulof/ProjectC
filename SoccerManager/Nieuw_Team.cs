@@ -11,9 +11,12 @@ namespace SoccerManager
 {
     public partial class Nieuw_Team : Form
     {
+        SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
+        DataSet dsSoccer;
         public Nieuw_Team()
         {
             InitializeComponent();
+            
         }
 
         private void Nieuw_Team_Load(object sender, EventArgs e)
@@ -23,7 +26,10 @@ namespace SoccerManager
 
         private void btn_toevoegen_Click(object sender, EventArgs e)
         {
-
+           wsSoccer.AddTeamGegevens(tb_team.Text,tb_verantwoordelijke.Text,tb_straat.Text,tb_postcode.Text,tb_plaats.Text,tb_tel.Text,tb_mail.Text);
+           wsSoccer.AddTeamNaam(tb_team.Text);
         }
+
+  
     }
 }

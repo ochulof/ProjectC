@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tb_tel = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_mail = new System.Windows.Forms.TextBox();
@@ -45,6 +46,8 @@
             this.lbl_team = new System.Windows.Forms.Label();
             this.btn_annuleren = new System.Windows.Forms.Button();
             this.btn_toevoegen = new System.Windows.Forms.Button();
+            this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_tel
@@ -206,6 +209,11 @@
             this.btn_toevoegen.UseVisualStyleBackColor = true;
             this.btn_toevoegen.Click += new System.EventHandler(this.btn_toevoegen_Click);
             // 
+            // dataSetBindingSource
+            // 
+            this.dataSetBindingSource.DataSource = typeof(System.Data.DataSet);
+            this.dataSetBindingSource.Position = 0;
+            // 
             // Nieuw_Team
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +239,7 @@
             this.Name = "Nieuw_Team";
             this.Text = "Nieuw team toevoegen";
             this.Load += new System.EventHandler(this.Nieuw_Team_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +264,6 @@
         private System.Windows.Forms.Label lbl_team;
         private System.Windows.Forms.Button btn_annuleren;
         private System.Windows.Forms.Button btn_toevoegen;
+        private System.Windows.Forms.BindingSource dataSetBindingSource;
     }
 }

@@ -35,6 +35,8 @@ namespace SoccerManager
             {
                 setIngelogd(true);
             }
+       
+
         }
         public void setIngelogd(Boolean antwoord)
         {
@@ -67,6 +69,7 @@ namespace SoccerManager
 
         private void mnu_nieuw_team_Click(object sender, RoutedEventArgs e)
         {
+
             btn_nieuw_team_Click(sender, e);
         }
         private void btn_nieuw_team_Click(object sender, RoutedEventArgs e)

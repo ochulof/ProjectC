@@ -23,6 +23,7 @@ namespace SoccerManager_Webservice
 
         private DatalaagSoccerManager DataAccess;
         
+        
         public SoccerManager_Webservice()
         {
             try
@@ -49,13 +50,55 @@ namespace SoccerManager_Webservice
         {
             try
             {
-                //Dim addresses As New AddressDB()
+                
                 return DataAccess.AddSpelerGegevens(voornaam, naam, team);
             }
             catch (Exception ex)
             {
                 throw (ex);
             }
+        }
+
+        [WebMethod]
+        public bool AddTeamGegevens(String naam, String verantwoordelijke, String straat_nr, string postcode, string plaats, string telefoon, string email)
+        {
+            try
+            {
+
+                return DataAccess.AddTeamGegevens(naam,verantwoordelijke,straat_nr,postcode,plaats,telefoon,email);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+        [WebMethod]
+        public bool AddTeamNaam(String naam)
+        {
+            try
+            {
+
+                return DataAccess.AddTeamNaam(naam);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
+        public DataSet SelectTeamNaam()
+        {
+            try{
+          
+                return DataAccess.SelectTeamNaam();
+            }
+            catch (Exception ex)
+            {
+                
+                throw (ex);
+            }
+          
         }
     }
 }

@@ -18,6 +18,7 @@ namespace SoccerManager_Webservice
         private SqlDataAdapter adpSoccer = new SqlDataAdapter();
         private SqlCommand cmdSoccer;
         private DataSet dsSoccer = new DataSet();
+      
 
         private SqlTransaction sqlTransaction;
 
@@ -86,6 +87,94 @@ namespace SoccerManager_Webservice
 
             Finish_StoredProcedureCall();
             return bStatus;
+        }
+
+        public bool AddTeamGegevens(String naam, String verantwoordelijke, String straat_nr, string postcode, string plaats, string telefoon, string email)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("AddTeamGegevens");
+                cmdSoccer.Parameters.AddWithValue("naam", naam);
+                cmdSoccer.Parameters.AddWithValue("verantwoordelijke",verantwoordelijke);
+                cmdSoccer.Parameters.AddWithValue("straat_nr", straat_nr);
+                cmdSoccer.Parameters.AddWithValue("postcode", postcode);
+                cmdSoccer.Parameters.AddWithValue("plaats", plaats);
+                cmdSoccer.Parameters.AddWithValue("telefoon", telefoon);
+                cmdSoccer.Parameters.AddWithValue("email", email);
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+        public bool AddTeamNaam(String naam)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("AddTeamNaam");
+                cmdSoccer.Parameters.AddWithValue("naam", naam);
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public DataSet SelectTeamNaam()
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectTeamNaam");
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+                
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
         }
     }
 }
