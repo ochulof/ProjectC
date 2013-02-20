@@ -26,8 +26,15 @@ namespace SoccerManager
 
         private void btn_toevoegen_Click(object sender, EventArgs e)
         {
-           wsSoccer.AddTeamGegevens(tb_team.Text,tb_verantwoordelijke.Text,tb_straat.Text,tb_postcode.Text,tb_plaats.Text,tb_tel.Text,tb_mail.Text);
-           wsSoccer.AddTeamNaam(tb_team.Text);
+            if (!(tb_team.Text.Equals("") || tb_verantwoordelijke.Text.Equals("") || tb_straat.Text.Equals("") || tb_postcode.Text.Equals("") || tb_plaats.Text.Equals("") || tb_tel.Text.Equals("") || tb_mail.Text.Equals("")))
+            {
+
+                wsSoccer.AddTeamGegevens(tb_team.Text, tb_verantwoordelijke.Text, tb_straat.Text, tb_postcode.Text, tb_plaats.Text, tb_tel.Text, tb_mail.Text);
+                wsSoccer.AddTeamNaam(tb_team.Text);
+            }
+            else
+                MessageBox.Show("Vul alle velden in!", "Foutmelding", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
   

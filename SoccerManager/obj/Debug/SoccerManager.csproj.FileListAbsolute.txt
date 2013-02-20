@@ -24,3 +24,4 @@ C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager\o
 F:\Github\ProjectC\SoccerManager\obj\Debug\SoccerManager.exe
 F:\Github\ProjectC\SoccerManager\obj\Debug\SoccerManager.pdb
 C:\Users\wim\Documents\Visual Studio 2012\Projects\SoccerManager\SoccerManager\bin\Debug\SoccerManager.exe.config
+F:\Github\ProjectC\SoccerManager\bin\Debug\SoccerManager.exe.config
