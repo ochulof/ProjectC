@@ -1,0 +1,43 @@
+eerst en vooral procedure gewijzigd, @match_id stond bij de parameters die meegegeven worden, hier gaat c# al fout geven denk ik, maar niet zeker.
+dus gewoon daarna @match_id gedeclareerd.
+
+identity(1,1) weggehaalt in datatabel
+gespeeld default op nee gezet
+
+eerst stond opmerking op not null -> maar opmerking mag volgens mij leeg zijn. dus op null gezet.
+Scheidrechter staat ook op null, maar moet die niet altijd ingevuld?  voorlopig heb ik dit nog niet aangepast.
+
+
+daarna om die lelijke endpoint listening fout op te lossen heb ik serieus lange en onbegrijpelijke code toegevoegd aan web.config
+
+<system.serviceModel>
+      <bindings>
+         <basicHttpBinding>
+            <binding name="TransportSecurity">
+               <security mode="Transport">
+                  <transport clientCredentialType="None"/>
+               </security>
+            </binding>
+         </basicHttpBinding>
+      </bindings>
+      <services>
+         <service   behaviorConfiguration="SoccerWebservice.SoccerManager_WebserviceSoap" name="SoccerManager_WebserviceSoap">
+            
+              <endpoint address="http://localhost:3367/SoccerManager_Webservice.asmx"
+                binding="basicHttpBinding" bindingConfiguration="SoccerManager_WebserviceSoap"
+                contract="SoccerWebservice.SoccerManager_WebserviceSoap" name="SoccerManager_WebserviceSoap" >
+               <identity>
+                  <dns value="" />
+               </identity>
+            </endpoint>
+            
+         </service>
+      </services>
+   </system.serviceModel>
+
+
+
+
+
+Stef, moest ge dit nog aan het lezen zijn. ook op dit formulier mag validatie gedaan worden.
+Alles moet ingevuld worden behalve scheidsrechter en opmerking.

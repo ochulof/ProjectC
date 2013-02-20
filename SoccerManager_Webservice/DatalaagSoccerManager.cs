@@ -215,13 +215,14 @@ namespace SoccerManager_Webservice
             {
                 Prepare_StoredProcedureCall("SelectTeamNaamPerPoule");
                 cmdSoccer.Parameters.AddWithValue("poule", poule);
-
+                cmdSoccer.ExecuteNonQuery();
                 adpSoccer = new SqlDataAdapter(cmdSoccer);
 
                 
 
                 adpSoccer.Fill(dsSoccer);
                 sqlTransaction.Commit();
+                
             }
             catch (SqlException ex)
             {

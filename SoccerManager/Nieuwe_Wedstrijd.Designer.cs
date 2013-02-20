@@ -215,7 +215,7 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 8F);
             this.label3.Location = new System.Drawing.Point(248, 223);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Terrein";
             // 

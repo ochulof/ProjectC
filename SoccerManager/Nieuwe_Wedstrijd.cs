@@ -24,18 +24,22 @@ namespace SoccerManager
 
         private void cb_poule_SelectedIndexChanged(object sender, EventArgs e)
         {
+            voegTeamsToe();
+        }
+        private void voegTeamsToe()
+        {
+            // dsTeamsThuis = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
+            //dsTeamsUit = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
             dsTeamsThuis = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
             dsTeamsUit = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
-           
+
             this.cb_thuis.DataSource = dsTeamsThuis.Tables[0];
             this.cb_uit.DataSource = dsTeamsUit.Tables[0];
-
             this.cb_thuis.DisplayMember = "naam";
             this.cb_thuis.ValueMember = "naam";
             this.cb_uit.DisplayMember = "naam";
             this.cb_uit.ValueMember = "naam";
         }
-
         private void btn_toevoegen_Click(object sender, EventArgs e)
         {
             string datum = dateTimePicker1.Value.Date.ToShortDateString();
@@ -50,7 +54,7 @@ namespace SoccerManager
             wedstrijd[6] = tb_scheidsrechter.Text;
             wedstrijd[7] = tb_opmerking.Text;
 
-            if (!wedstrijd[4].Equals("") && wedstrijd[5].Equals("")) //programma crasht als er geen tijdstip wordt ingegeven
+            if (!(wedstrijd[4].Equals("") || wedstrijd[5].Equals(""))) //programma crasht als er geen tijdstip wordt ingegeven
             {
                 wsSoccer.AddNieuweWedstrijd(wedstrijd[0], wedstrijd[1], wedstrijd[2], wedstrijd[3], wedstrijd[4], wedstrijd[5], wedstrijd[6], wedstrijd[7]);
             }

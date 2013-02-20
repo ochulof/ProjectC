@@ -120,7 +120,6 @@ namespace SoccerManager_Webservice
         {
             try
             {
-
                 return DataAccess.SelectTeamNaamPerPoule(poule);
             }
             catch (Exception ex)
