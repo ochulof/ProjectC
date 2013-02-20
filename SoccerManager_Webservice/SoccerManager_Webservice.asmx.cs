@@ -87,6 +87,20 @@ namespace SoccerManager_Webservice
         }
 
         [WebMethod]
+        public bool AddNieuweWedstrijd(String team1, String team2, String terrein, String poule, String datum, String uur, String scheidsrechter,String opmerking)
+        {
+            try
+            {
+
+                return DataAccess.AddNieuweWedstrijd(team1, team2, terrein, poule, datum, uur, scheidsrechter, opmerking);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
         public DataSet SelectTeamNaam()
         {
             try{
@@ -99,6 +113,22 @@ namespace SoccerManager_Webservice
                 throw (ex);
             }
           
+        }
+
+        [WebMethod]
+        public DataSet SelectTeamNaamPerPoule(string poule)
+        {
+            try
+            {
+
+                return DataAccess.SelectTeamNaamPerPoule(poule);
+            }
+            catch (Exception ex)
+            {
+
+                throw (ex);
+            }
+
         }
     }
 }

@@ -142,6 +142,38 @@ namespace SoccerManager_Webservice
             return bStatus;
         }
 
+        public bool AddNieuweWedstrijd(String team1, String team2, String terrein, String poule, String datum, String uur, String scheidsrechter, String opmerking)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("AddNieuweWedstrijd");
+                cmdSoccer.Parameters.AddWithValue("team1", team1);
+                cmdSoccer.Parameters.AddWithValue("team2", team2);
+                cmdSoccer.Parameters.AddWithValue("terrein", terrein);
+                cmdSoccer.Parameters.AddWithValue("poule", poule);
+                cmdSoccer.Parameters.AddWithValue("datum", datum);
+                cmdSoccer.Parameters.AddWithValue("uur", uur);
+                cmdSoccer.Parameters.AddWithValue("scheidsrechter", scheidsrechter);
+                cmdSoccer.Parameters.AddWithValue("opmerking", opmerking);
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
         public DataSet SelectTeamNaam()
         {
             try
@@ -159,6 +191,47 @@ namespace SoccerManager_Webservice
                 dsSoccer = null;
                 //Add additional logging
                 
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
+        }
+
+        public DataSet SelectTeamNaamPerPoule(string poule)
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectTeamNaamPerPoule");
+                cmdSoccer.Parameters.AddWithValue("poule", poule);
+
+                adpSoccer = new SqlDataAdapter(cmdSoccer);
+
+                
+
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+
                 throw;
             }
 

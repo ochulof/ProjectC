@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_opmerking = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -36,8 +36,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_scheidsrechter = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_toevoegen = new System.Windows.Forms.Button();
+            this.btn_annuleren = new System.Windows.Forms.Button();
             this.cb_minuten = new System.Windows.Forms.ComboBox();
             this.cb_uren = new System.Windows.Forms.ComboBox();
             this.cb_terrien = new System.Windows.Forms.ComboBox();
@@ -51,16 +51,16 @@
             this.lbl_wedstrijd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb_opmerking
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.textBox1.Location = new System.Drawing.Point(306, 343);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(271, 34);
-            this.textBox1.TabIndex = 31;
+            this.tb_opmerking.AcceptsReturn = true;
+            this.tb_opmerking.Font = new System.Drawing.Font("Verdana", 8F);
+            this.tb_opmerking.Location = new System.Drawing.Point(306, 343);
+            this.tb_opmerking.Multiline = true;
+            this.tb_opmerking.Name = "tb_opmerking";
+            this.tb_opmerking.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_opmerking.Size = new System.Drawing.Size(271, 34);
+            this.tb_opmerking.TabIndex = 31;
             // 
             // label9
             // 
@@ -129,27 +129,28 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Scheidsrechter";
             // 
-            // button2
+            // btn_toevoegen
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Font = new System.Drawing.Font("Verdana", 10F);
-            this.button2.Location = new System.Drawing.Point(391, 393);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 35);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Toevoegen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_toevoegen.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_toevoegen.Font = new System.Drawing.Font("Verdana", 10F);
+            this.btn_toevoegen.Location = new System.Drawing.Point(391, 393);
+            this.btn_toevoegen.Name = "btn_toevoegen";
+            this.btn_toevoegen.Size = new System.Drawing.Size(220, 35);
+            this.btn_toevoegen.TabIndex = 33;
+            this.btn_toevoegen.Text = "Toevoegen";
+            this.btn_toevoegen.UseVisualStyleBackColor = true;
+            this.btn_toevoegen.Click += new System.EventHandler(this.btn_toevoegen_Click);
             // 
-            // button1
+            // btn_annuleren
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Font = new System.Drawing.Font("Verdana", 10F);
-            this.button1.Location = new System.Drawing.Point(91, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 35);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Annuleren";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_annuleren.Font = new System.Drawing.Font("Verdana", 10F);
+            this.btn_annuleren.Location = new System.Drawing.Point(91, 393);
+            this.btn_annuleren.Name = "btn_annuleren";
+            this.btn_annuleren.Size = new System.Drawing.Size(220, 35);
+            this.btn_annuleren.TabIndex = 32;
+            this.btn_annuleren.Text = "Annuleren";
+            this.btn_annuleren.UseVisualStyleBackColor = true;
             // 
             // cb_minuten
             // 
@@ -214,7 +215,7 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 8F);
             this.label3.Location = new System.Drawing.Point(248, 223);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Terrein";
             // 
@@ -229,6 +230,7 @@
             this.cb_poule.Name = "cb_poule";
             this.cb_poule.Size = new System.Drawing.Size(80, 21);
             this.cb_poule.TabIndex = 19;
+            this.cb_poule.SelectedIndexChanged += new System.EventHandler(this.cb_poule_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -284,7 +286,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 505);
             this.Controls.Add(this.lbl_wedstrijd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_opmerking);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label8);
@@ -292,8 +294,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_scheidsrechter);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_toevoegen);
+            this.Controls.Add(this.btn_annuleren);
             this.Controls.Add(this.cb_minuten);
             this.Controls.Add(this.cb_uren);
             this.Controls.Add(this.cb_terrien);
@@ -313,7 +315,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_opmerking;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
@@ -321,8 +323,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_scheidsrechter;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_toevoegen;
+        private System.Windows.Forms.Button btn_annuleren;
         private System.Windows.Forms.ComboBox cb_minuten;
         private System.Windows.Forms.ComboBox cb_uren;
         private System.Windows.Forms.ComboBox cb_terrien;
