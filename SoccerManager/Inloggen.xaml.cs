@@ -30,13 +30,13 @@ namespace SoccerManager
         private void btn_Inloggen_Click(object sender, RoutedEventArgs e)
         {
             //Connection String Wim
-           string connStr = "Data Source=.\\SQLEXPRESS1;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
+           //string connStr = "Data Source=.\\SQLEXPRESS1;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
             
             //Connection String Stef
             //string connStr = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
 
             //Connection String Stijn
-            //string connStr = "Data Source=.;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
+            string connStr = "Data Source=.;AttachDbFilename=C:\\databank\\SoccerManager.mdf;Integrated Security=True;Connect Timeout=30";
             
             SqlConnection con = new SqlConnection(connStr);
 
