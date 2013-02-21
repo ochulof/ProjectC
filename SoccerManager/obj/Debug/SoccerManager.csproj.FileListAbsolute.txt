@@ -75,3 +75,6 @@ C:\databank\SoccerManager\obj\Debug\SoccerManager.Spelerslijst.resources
 C:\databank\SoccerManager\obj\Debug\SoccerManager.Teams.resources
 C:\databank\SoccerManager\obj\Debug\SoccerManager.Wedstrijdschema.resources
 C:\databank\SoccerManager\obj\Debug\SoccerManager.csproj.GenerateResource.Cache
+C:\Users\wim\Documents\GitHub\ProjectC\SoccerManager\bin\Debug\SoccerManager.exe.config
+C:\Users\wim\Documents\GitHub\ProjectC\SoccerManager\obj\Debug\SoccerManager.exe
+C:\Users\wim\Documents\GitHub\ProjectC\SoccerManager\obj\Debug\SoccerManager.pdb
