@@ -30,15 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button3 = new System.Windows.Forms.Button();
-            this.tb_mail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.tb_telefoon = new System.Windows.Forms.TextBox();
-            this.tb_plaats = new System.Windows.Forms.TextBox();
-            this.tb_postcode = new System.Windows.Forms.TextBox();
-            this.tb_adres = new System.Windows.Forms.TextBox();
-            this.tb_verantwoordelijke = new System.Windows.Forms.TextBox();
-            this.cb_poule = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,6 +40,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_telefoon = new System.Windows.Forms.Label();
+            this.lbl_plaats = new System.Windows.Forms.Label();
+            this.lbl_postcode = new System.Windows.Forms.Label();
+            this.lbl_adres = new System.Windows.Forms.Label();
+            this.lbl_verantwoordelijke = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +61,6 @@
             this.button3.Text = "<--";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // tb_mail
-            // 
-            this.tb_mail.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_mail.Location = new System.Drawing.Point(190, 261);
-            this.tb_mail.Name = "tb_mail";
-            this.tb_mail.Size = new System.Drawing.Size(226, 20);
-            this.tb_mail.TabIndex = 38;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -81,69 +71,6 @@
             this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 37;
             this.label9.Text = "E-mail:";
-            // 
-            // tb_telefoon
-            // 
-            this.tb_telefoon.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_telefoon.Location = new System.Drawing.Point(190, 230);
-            this.tb_telefoon.Name = "tb_telefoon";
-            this.tb_telefoon.Size = new System.Drawing.Size(226, 20);
-            this.tb_telefoon.TabIndex = 36;
-            // 
-            // tb_plaats
-            // 
-            this.tb_plaats.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_plaats.Location = new System.Drawing.Point(190, 198);
-            this.tb_plaats.Name = "tb_plaats";
-            this.tb_plaats.Size = new System.Drawing.Size(226, 20);
-            this.tb_plaats.TabIndex = 35;
-            // 
-            // tb_postcode
-            // 
-            this.tb_postcode.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_postcode.Location = new System.Drawing.Point(190, 167);
-            this.tb_postcode.Name = "tb_postcode";
-            this.tb_postcode.Size = new System.Drawing.Size(226, 20);
-            this.tb_postcode.TabIndex = 34;
-            // 
-            // tb_adres
-            // 
-            this.tb_adres.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_adres.Location = new System.Drawing.Point(190, 135);
-            this.tb_adres.Name = "tb_adres";
-            this.tb_adres.Size = new System.Drawing.Size(226, 20);
-            this.tb_adres.TabIndex = 33;
-            // 
-            // tb_verantwoordelijke
-            // 
-            this.tb_verantwoordelijke.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_verantwoordelijke.Location = new System.Drawing.Point(190, 97);
-            this.tb_verantwoordelijke.Name = "tb_verantwoordelijke";
-            this.tb_verantwoordelijke.Size = new System.Drawing.Size(226, 20);
-            this.tb_verantwoordelijke.TabIndex = 32;
-            // 
-            // cb_poule
-            // 
-            this.cb_poule.Font = new System.Drawing.Font("Verdana", 8F);
-            this.cb_poule.FormattingEnabled = true;
-            this.cb_poule.Items.AddRange(new object[] {
-            "A",
-            "B"});
-            this.cb_poule.Location = new System.Drawing.Point(526, 258);
-            this.cb_poule.Name = "cb_poule";
-            this.cb_poule.Size = new System.Drawing.Size(48, 21);
-            this.cb_poule.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 8F);
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(479, 261);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Poule: ";
             // 
             // label7
             // 
@@ -251,21 +178,67 @@
             this.comboBox1.TabIndex = 21;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(185, 262);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(0, 13);
+            this.lbl_email.TabIndex = 51;
+            // 
+            // lbl_telefoon
+            // 
+            this.lbl_telefoon.AutoSize = true;
+            this.lbl_telefoon.Location = new System.Drawing.Point(185, 231);
+            this.lbl_telefoon.Name = "lbl_telefoon";
+            this.lbl_telefoon.Size = new System.Drawing.Size(0, 13);
+            this.lbl_telefoon.TabIndex = 50;
+            // 
+            // lbl_plaats
+            // 
+            this.lbl_plaats.AutoSize = true;
+            this.lbl_plaats.Location = new System.Drawing.Point(185, 199);
+            this.lbl_plaats.Name = "lbl_plaats";
+            this.lbl_plaats.Size = new System.Drawing.Size(0, 13);
+            this.lbl_plaats.TabIndex = 49;
+            // 
+            // lbl_postcode
+            // 
+            this.lbl_postcode.AutoSize = true;
+            this.lbl_postcode.Location = new System.Drawing.Point(185, 168);
+            this.lbl_postcode.Name = "lbl_postcode";
+            this.lbl_postcode.Size = new System.Drawing.Size(0, 13);
+            this.lbl_postcode.TabIndex = 48;
+            // 
+            // lbl_adres
+            // 
+            this.lbl_adres.AutoSize = true;
+            this.lbl_adres.Location = new System.Drawing.Point(185, 136);
+            this.lbl_adres.Name = "lbl_adres";
+            this.lbl_adres.Size = new System.Drawing.Size(0, 13);
+            this.lbl_adres.TabIndex = 47;
+            // 
+            // lbl_verantwoordelijke
+            // 
+            this.lbl_verantwoordelijke.AutoSize = true;
+            this.lbl_verantwoordelijke.Location = new System.Drawing.Point(185, 100);
+            this.lbl_verantwoordelijke.Name = "lbl_verantwoordelijke";
+            this.lbl_verantwoordelijke.Size = new System.Drawing.Size(0, 13);
+            this.lbl_verantwoordelijke.TabIndex = 46;
+            // 
             // Teams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 578);
+            this.Controls.Add(this.lbl_email);
+            this.Controls.Add(this.lbl_telefoon);
+            this.Controls.Add(this.lbl_plaats);
+            this.Controls.Add(this.lbl_postcode);
+            this.Controls.Add(this.lbl_adres);
+            this.Controls.Add(this.lbl_verantwoordelijke);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.tb_mail);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tb_telefoon);
-            this.Controls.Add(this.tb_plaats);
-            this.Controls.Add(this.tb_postcode);
-            this.Controls.Add(this.tb_adres);
-            this.Controls.Add(this.tb_verantwoordelijke);
-            this.Controls.Add(this.cb_poule);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -286,15 +259,7 @@
         #endregion
 
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox tb_mail;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tb_telefoon;
-        private System.Windows.Forms.TextBox tb_plaats;
-        private System.Windows.Forms.TextBox tb_postcode;
-        private System.Windows.Forms.TextBox tb_adres;
-        private System.Windows.Forms.TextBox tb_verantwoordelijke;
-        private System.Windows.Forms.ComboBox cb_poule;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -304,5 +269,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_telefoon;
+        private System.Windows.Forms.Label lbl_plaats;
+        private System.Windows.Forms.Label lbl_postcode;
+        private System.Windows.Forms.Label lbl_adres;
+        private System.Windows.Forms.Label lbl_verantwoordelijke;
     }
 }
