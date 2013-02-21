@@ -59,6 +59,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Bekijk finale wedstrijden";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -79,10 +80,11 @@
             this.cb_tespelen.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tespelen.Location = new System.Drawing.Point(423, 71);
             this.cb_tespelen.Name = "cb_tespelen";
-            this.cb_tespelen.Size = new System.Drawing.Size(151, 17);
+            this.cb_tespelen.Size = new System.Drawing.Size(150, 17);
             this.cb_tespelen.TabIndex = 14;
             this.cb_tespelen.Text = "Te spelen wedstrijden";
             this.cb_tespelen.UseVisualStyleBackColor = true;
+            this.cb_tespelen.CheckedChanged += new System.EventHandler(this.cb_tespelen_CheckedChanged);
             // 
             // cb_gespeeld
             // 
@@ -96,6 +98,7 @@
             this.cb_gespeeld.TabIndex = 13;
             this.cb_gespeeld.Text = "Gespeelde wedstrijden";
             this.cb_gespeeld.UseVisualStyleBackColor = true;
+            this.cb_gespeeld.CheckedChanged += new System.EventHandler(this.cb_gespeeld_CheckedChanged);
             // 
             // label1
             // 
@@ -103,7 +106,7 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Toon: ";
             // 
@@ -116,6 +119,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Nieuwe wedstrijd toevoegen";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -136,6 +140,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(578, 411);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Wedstrijdschema
             // 

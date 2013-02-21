@@ -72,6 +72,7 @@ namespace SoccerManager_Webservice
                 throw (ex);
             }
         }
+
         [WebMethod]
         public bool AddTeamNaam(String naam)
         {
@@ -137,6 +138,22 @@ namespace SoccerManager_Webservice
             try
             {
                 return DataAccess.SelectTeamNaamPerPoule(poule);
+            }
+            catch (Exception ex)
+            {
+
+                throw (ex);
+            }
+
+        }
+
+
+        [WebMethod]
+        public DataSet SelectWedstrijden(string gespeeld)
+        {
+            try
+            {
+                return DataAccess.SelectWedstrijden(gespeeld);
             }
             catch (Exception ex)
             {

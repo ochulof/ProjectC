@@ -285,5 +285,47 @@ namespace SoccerManager_Webservice
 
             return dsSoccer;
         }
+
+        public DataSet SelectWedstrijden(string gespeeld)
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectWedstrijden");
+                cmdSoccer.Parameters.AddWithValue("gespeeld", gespeeld);
+                //  cmdSoccer.ExecuteNonQuery();
+                adpSoccer = new SqlDataAdapter(cmdSoccer);
+
+
+
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
+        }
     }
 }

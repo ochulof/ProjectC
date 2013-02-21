@@ -138,6 +138,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectWedstrijden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gespeeld" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectWedstrijdenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectWedstrijdenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -188,6 +209,12 @@
   <wsdl:message name="SelectTeamNaamPerPouleSoapOut">
     <wsdl:part name="parameters" element="tns:SelectTeamNaamPerPouleResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectWedstrijdenSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectWedstrijden" />
+  </wsdl:message>
+  <wsdl:message name="SelectWedstrijdenSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectWedstrijdenResponse" />
+  </wsdl:message>
   <wsdl:portType name="SoccerManager_WebserviceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -220,6 +247,10 @@
     <wsdl:operation name="SelectTeamNaamPerPoule">
       <wsdl:input message="tns:SelectTeamNaamPerPouleSoapIn" />
       <wsdl:output message="tns:SelectTeamNaamPerPouleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWedstrijden">
+      <wsdl:input message="tns:SelectWedstrijdenSoapIn" />
+      <wsdl:output message="tns:SelectWedstrijdenSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="SoccerManager_WebserviceSoap" type="tns:SoccerManager_WebserviceSoap">
@@ -296,6 +327,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectWedstrijden">
+      <soap:operation soapAction="http://tempuri.org/SelectWedstrijden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="SoccerManager_WebserviceSoap12" type="tns:SoccerManager_WebserviceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -364,6 +404,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectTeamNaamPerPoule">
       <soap12:operation soapAction="http://tempuri.org/SelectTeamNaamPerPoule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWedstrijden">
+      <soap12:operation soapAction="http://tempuri.org/SelectWedstrijden" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

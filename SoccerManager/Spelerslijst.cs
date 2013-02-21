@@ -27,23 +27,9 @@ namespace SoccerManager
         private void GetTable()
         {
             DsSoccer = wsSoccer.SelectSpelerGegevens();
-
-           DataTable dataTable = DsSoccer.Tables.Add("spelers");
-          /*  dataTable.Columns.Add("naam");
-            dataTable.Columns.Add("voornaam");
-            dataTable.Columns.Add("team");
-            dataTable.Columns.Add("goals");
-            dataTable.Columns.Add("rood");
-            dataTable.Columns.Add("geel");*/
-
-            
-            
-
+            DataTable dataTable = DsSoccer.Tables.Add("spelers");
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = DsSoccer.Tables[0];
-            //dataGridView1.DataMember = "spelers";
-    
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
