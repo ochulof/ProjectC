@@ -40,6 +40,10 @@ namespace SoccerManager.SoccerWebservice {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet SelectTeamNaam();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSpelerGegevens", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectSpelerGegevens();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectTeamNaamPerPoule", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet SelectTeamNaamPerPoule(string poule);
@@ -94,6 +98,10 @@ namespace SoccerManager.SoccerWebservice {
         
         public System.Data.DataSet SelectTeamNaam() {
             return base.Channel.SelectTeamNaam();
+        }
+        
+        public System.Data.DataSet SelectSpelerGegevens() {
+            return base.Channel.SelectSpelerGegevens();
         }
         
         public System.Data.DataSet SelectTeamNaamPerPoule(string poule) {

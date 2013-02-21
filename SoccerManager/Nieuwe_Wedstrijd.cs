@@ -12,6 +12,7 @@ namespace SoccerManager
     public partial class Nieuwe_Wedstrijd : Form
     {
 
+
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
         DataSet dsTeamsThuis, dsTeamsUit;
 

@@ -11,9 +11,42 @@ namespace SoccerManager
 {
     public partial class Spelerslijst : Form
     {
+
+        SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
+        DataSet DsSoccer;
+              
+        
         public Spelerslijst()
         {
             InitializeComponent();
+             GetTable();
+            
+
+            
+        }
+        private void GetTable()
+        {
+            DsSoccer = wsSoccer.SelectSpelerGegevens();
+
+           DataTable dataTable = DsSoccer.Tables.Add("spelers");
+           /* dataTable.Columns.Add("naam");
+            dataTable.Columns.Add("voornaam");
+            dataTable.Columns.Add("team");
+            dataTable.Columns.Add("goals");
+            dataTable.Columns.Add("rood");
+            dataTable.Columns.Add("geel");
+            * */
+
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = DsSoccer;
+            dataGridView1.DataMember = "spelers";
+    
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

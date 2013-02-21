@@ -100,6 +100,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectSpelerGegevens">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectSpelerGegevensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectSpelerGegevensResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="SelectTeamNaamPerPoule">
         <s:complexType>
           <s:sequence>
@@ -159,6 +176,12 @@
   <wsdl:message name="SelectTeamNaamSoapOut">
     <wsdl:part name="parameters" element="tns:SelectTeamNaamResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectSpelerGegevensSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectSpelerGegevens" />
+  </wsdl:message>
+  <wsdl:message name="SelectSpelerGegevensSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectSpelerGegevensResponse" />
+  </wsdl:message>
   <wsdl:message name="SelectTeamNaamPerPouleSoapIn">
     <wsdl:part name="parameters" element="tns:SelectTeamNaamPerPoule" />
   </wsdl:message>
@@ -189,6 +212,10 @@
     <wsdl:operation name="SelectTeamNaam">
       <wsdl:input message="tns:SelectTeamNaamSoapIn" />
       <wsdl:output message="tns:SelectTeamNaamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSpelerGegevens">
+      <wsdl:input message="tns:SelectSpelerGegevensSoapIn" />
+      <wsdl:output message="tns:SelectSpelerGegevensSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="SelectTeamNaamPerPoule">
       <wsdl:input message="tns:SelectTeamNaamPerPouleSoapIn" />
@@ -244,6 +271,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectTeamNaam">
       <soap:operation soapAction="http://tempuri.org/SelectTeamNaam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSpelerGegevens">
+      <soap:operation soapAction="http://tempuri.org/SelectSpelerGegevens" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -310,6 +346,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectTeamNaam">
       <soap12:operation soapAction="http://tempuri.org/SelectTeamNaam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSpelerGegevens">
+      <soap12:operation soapAction="http://tempuri.org/SelectSpelerGegevens" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

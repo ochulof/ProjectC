@@ -9,6 +9,6 @@ C:\Users\Stijn\Desktop\ProjectC\SoccerManager_Webservice\obj\Debug\SoccerManager
 C:\Users\Stijn\Desktop\ProjectC\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.pdb
 C:\databank\SoccerManager_Webservice\bin\SoccerManager_Webservice.dll
 C:\databank\SoccerManager_Webservice\bin\SoccerManager_Webservice.pdb
-C:\databank\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.csprojResolveAssemblyReference.cache
 C:\databank\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.dll
 C:\databank\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.pdb
+C:\databank\SoccerManager_Webservice\obj\Debug\SoccerManager_Webservice.csprojResolveAssemblyReference.cache

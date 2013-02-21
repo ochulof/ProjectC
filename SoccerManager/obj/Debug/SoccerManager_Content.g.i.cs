@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon-voetbal.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("web%20references/soccermanagerwebservice/soccermanager_webservice.disco")]
 
 

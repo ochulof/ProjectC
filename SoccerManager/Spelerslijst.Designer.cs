@@ -43,6 +43,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "<--";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -56,14 +57,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(578, 538);
             this.dataGridView1.TabIndex = 2;
             // 
-            // spelerslijst
+            // Spelerslijst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 614);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "spelerslijst";
+            this.Name = "Spelerslijst";
             this.Text = "spelerslijst";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

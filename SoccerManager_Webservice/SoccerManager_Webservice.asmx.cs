@@ -116,6 +116,22 @@ namespace SoccerManager_Webservice
         }
 
         [WebMethod]
+        public DataSet SelectSpelerGegevens()
+        {
+            try
+            {
+
+                return DataAccess.SelectSpelerGegevens();
+            }
+            catch (Exception ex)
+            {
+
+                throw (ex);
+            }
+
+        }
+
+        [WebMethod]
         public DataSet SelectTeamNaamPerPoule(string poule)
         {
             try

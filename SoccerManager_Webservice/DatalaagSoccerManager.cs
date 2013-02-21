@@ -209,13 +209,48 @@ namespace SoccerManager_Webservice
             return dsSoccer;
         }
 
+        public DataSet SelectSpelerGegevens()
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectSpelerGegevens");
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
+        }
+
         public DataSet SelectTeamNaamPerPoule(string poule)
         {
             try
             {
                 Prepare_StoredProcedureCall("SelectTeamNaamPerPoule");
                 cmdSoccer.Parameters.AddWithValue("poule", poule);
-                cmdSoccer.ExecuteNonQuery();
+              //  cmdSoccer.ExecuteNonQuery();
                 adpSoccer = new SqlDataAdapter(cmdSoccer);
 
                 
