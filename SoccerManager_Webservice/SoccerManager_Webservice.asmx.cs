@@ -133,6 +133,22 @@ namespace SoccerManager_Webservice
         }
 
         [WebMethod]
+        public DataSet SelectTeamGegevens(string naam)
+        {
+            try
+            {
+
+                return DataAccess.SelectTeamGegevens(naam);
+            }
+            catch (Exception ex)
+            {
+
+                throw (ex);
+            }
+
+        }
+
+        [WebMethod]
         public DataSet SelectTeamNaamPerPoule(string poule)
         {
             try

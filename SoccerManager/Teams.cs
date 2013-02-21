@@ -13,6 +13,7 @@ namespace SoccerManager
     {
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
         DataSet dsTeams;
+        DataSet dsTeamGegevens;
         public Teams()
         {
             InitializeComponent();
@@ -30,7 +31,8 @@ namespace SoccerManager
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            dsTeamGegevens = wsSoccer.SelectTeamGegevens(this.comboBox1.Text);
+            tb_verantwoordelijke.Text = dsTeamGegevens.Tables[0].Rows[0]["verantwoordelijke"].ToString();
         }
     }
 }

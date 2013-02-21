@@ -244,6 +244,44 @@ namespace SoccerManager_Webservice
             return dsSoccer;
         }
 
+        public DataSet SelectTeamGegevens(string naam)
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectTeamGegevens");
+                cmdSoccer.Parameters.AddWithValue("naam", naam);
+                //  cmdSoccer.ExecuteNonQuery();
+                adpSoccer = new SqlDataAdapter(cmdSoccer);
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
+        }
+
         public DataSet SelectTeamNaamPerPoule(string poule)
         {
             try
