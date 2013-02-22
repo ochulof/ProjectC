@@ -46,6 +46,8 @@
             this.lbl_postcode = new System.Windows.Forms.Label();
             this.lbl_adres = new System.Windows.Forms.Label();
             this.lbl_verantwoordelijke = new System.Windows.Forms.Label();
+            this.lbl_poule = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,11 +228,32 @@
             this.lbl_verantwoordelijke.Size = new System.Drawing.Size(0, 13);
             this.lbl_verantwoordelijke.TabIndex = 46;
             // 
+            // lbl_poule
+            // 
+            this.lbl_poule.AutoSize = true;
+            this.lbl_poule.Location = new System.Drawing.Point(416, 293);
+            this.lbl_poule.Name = "lbl_poule";
+            this.lbl_poule.Size = new System.Drawing.Size(0, 13);
+            this.lbl_poule.TabIndex = 53;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 8F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(357, 293);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Poule";
+            // 
             // Teams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 578);
+            this.Controls.Add(this.lbl_poule);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_telefoon);
             this.Controls.Add(this.lbl_plaats);
@@ -275,5 +298,7 @@
         private System.Windows.Forms.Label lbl_postcode;
         private System.Windows.Forms.Label lbl_adres;
         private System.Windows.Forms.Label lbl_verantwoordelijke;
+        private System.Windows.Forms.Label lbl_poule;
+        private System.Windows.Forms.Label label10;
     }
 }

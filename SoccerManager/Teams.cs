@@ -38,7 +38,11 @@ namespace SoccerManager
             lbl_plaats.Text = dsTeamGegevens.Tables[0].Rows[0]["plaats"].ToString();
             lbl_postcode.Text = dsTeamGegevens.Tables[0].Rows[0]["postcode"].ToString();
             lbl_telefoon.Text = dsTeamGegevens.Tables[0].Rows[0]["telefoon"].ToString();
-           
+            lbl_poule.Text = dsTeamGegevens.Tables[1].Rows[0]["poule"].ToString();
+
+            DataTable dataTable = dsTeamGegevens.Tables.Add("spelers");
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = dsTeamGegevens.Tables[2];
             
                 
         }
