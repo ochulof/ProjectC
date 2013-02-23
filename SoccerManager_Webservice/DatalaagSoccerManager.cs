@@ -365,5 +365,154 @@ namespace SoccerManager_Webservice
 
             return dsSoccer;
         }
+
+        public bool UpdateTeamGelijk(String team, int doel_gemaakt, int doel_tegen)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateTeamGelijk");
+
+                cmdSoccer.Parameters.AddWithValue("team", team);
+                cmdSoccer.Parameters.AddWithValue("doel_gemaakt", doel_gemaakt);
+                cmdSoccer.Parameters.AddWithValue("doel_tegen", doel_tegen);
+
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public bool UpdateTeamGewonnen(String team, int doel_gemaakt, int doel_tegen)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateTeamGewonnen");
+
+                cmdSoccer.Parameters.AddWithValue("team", team);
+                cmdSoccer.Parameters.AddWithValue("doel_gemaakt", doel_gemaakt);
+                cmdSoccer.Parameters.AddWithValue("doel_tegen", doel_tegen);
+
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public bool UpdateTeamVerloren(String team, int doel_gemaakt, int doel_tegen)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateTeamVerloren");
+
+                cmdSoccer.Parameters.AddWithValue("team", team);
+                cmdSoccer.Parameters.AddWithValue("doel_gemaakt", doel_gemaakt);
+                cmdSoccer.Parameters.AddWithValue("doel_tegen", doel_tegen);
+
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public bool UpdateWedstrijden(String match_id, int goals1, int goals2, String opmerking)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateWedstrijden");
+
+                cmdSoccer.Parameters.AddWithValue("match_id", match_id);
+                cmdSoccer.Parameters.AddWithValue("goals1", goals1);
+                cmdSoccer.Parameters.AddWithValue("goals2", goals2);
+                cmdSoccer.Parameters.AddWithValue("opmerking", opmerking);
+
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public bool UpdateSpelers(String naam, String voornaam, int goals, int geel, int rood)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateSpelers");
+
+                cmdSoccer.Parameters.AddWithValue("naam", naam);
+                cmdSoccer.Parameters.AddWithValue("voornaam", voornaam);
+                cmdSoccer.Parameters.AddWithValue("goals", goals);
+                cmdSoccer.Parameters.AddWithValue("geel", geel);
+                cmdSoccer.Parameters.AddWithValue("rood", rood);
+
+
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
     }
+
 }

@@ -135,9 +135,60 @@ namespace SoccerManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //update gegevens naar databank (wedstrijden en elke speler en teams)
+            int scoreThuis = Convert.ToInt32(score_thuis.Value);
+            int scoreUit = Convert.ToInt32(score_uit.Value);
+            String thuisPloeg = lbl_thuis.Text;
+            String uitPloeg = lbl_uit.Text;
 
+            //UPDATE WEDSTRIJDEN
+            wsSoccer.UpdateWedstrijden(label1.Text, scoreThuis, scoreUit, tb_opmerking.Text);
+            
+            //UPDATE TEAMS
+            if (score_thuis.Value > score_uit.Value)
+            {
+                //thuisploeg wint, uitploeg verliest
+                wsSoccer.UpdateTeamGewonnen(thuisPloeg, scoreThuis, scoreUit);
+                wsSoccer.UpdateTeamVerloren(uitPloeg, scoreUit, scoreThuis);
 
+            }
+            else if (score_thuis.Value < score_uit.Value)
+            {
+                //uitploeg wint, thuisploeg verliest
+                wsSoccer.UpdateTeamGewonnen(uitPloeg, scoreUit, scoreThuis);
+                wsSoccer.UpdateTeamVerloren(thuisPloeg, scoreThuis, scoreUit);
+            }
+            else
+            {
+                //gelijkspel
+                wsSoccer.UpdateTeamGelijk(uitPloeg, scoreUit, scoreThuis);
+                wsSoccer.UpdateTeamGelijk(thuisPloeg, scoreThuis, scoreUit);
+            }
+
+            String naam="",voornaam="";
+            int goals=0, geel=0, rood=0;
+
+            //UPDATE SPELERS thuisploeg
+            for (int i = 0; i < aantalThuis; i++)
+            {
+                naam = dsSpelersThuis.Tables[2].Rows[i][0].ToString();
+                voornaam = dsSpelersThuis.Tables[2].Rows[i][1].ToString();
+                goals = Convert.ToInt32(gegevensThuis[i, 0].Value);
+                geel = Convert.ToInt32(gegevensThuis[i, 1].Value);
+                rood = Convert.ToInt32(gegevensThuis[i, 2].Value);
+                wsSoccer.UpdateSpelers(naam, voornaam, goals, geel, rood);
+            }
+
+            //UPDATE SPELERS uitploeg
+            for (int i = 0; i < aantalUit; i++)
+            {
+                naam = dsSpelersUit.Tables[2].Rows[i][0].ToString();
+                voornaam = dsSpelersUit.Tables[2].Rows[i][1].ToString();
+                goals = Convert.ToInt32(gegevensUit[i, 0].Value);
+                geel = Convert.ToInt32(gegevensUit[i, 1].Value);
+                rood = Convert.ToInt32(gegevensUit[i, 2].Value);
+                wsSoccer.UpdateSpelers(naam, voornaam, goals, geel, rood);
+            }
+             
         }
 
     }

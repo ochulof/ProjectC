@@ -8,7 +8,7 @@ namespace SoccerManager
     static class Administrator
     {
 
-        public static Boolean logged = false;
+        public static Boolean logged = true;
 
         public static void logIn()
         {

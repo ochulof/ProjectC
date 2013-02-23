@@ -180,6 +180,89 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="UpdateTeamGelijk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="team" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_gemaakt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_tegen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTeamGelijkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTeamGelijkResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTeamGewonnen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="team" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_gemaakt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_tegen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTeamGewonnenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTeamGewonnenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTeamVerloren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="team" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_gemaakt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doel_tegen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTeamVerlorenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTeamVerlorenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateWedstrijden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="match_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="goals1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="goals2" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="opmerking" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateWedstrijdenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateWedstrijdenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSpelers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="naam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voornaam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="goals" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="geel" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rood" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSpelersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSpelersResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -242,6 +325,36 @@
   <wsdl:message name="SelectWedstrijdenSoapOut">
     <wsdl:part name="parameters" element="tns:SelectWedstrijdenResponse" />
   </wsdl:message>
+  <wsdl:message name="UpdateTeamGelijkSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTeamGelijk" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTeamGelijkSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTeamGelijkResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTeamGewonnenSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTeamGewonnen" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTeamGewonnenSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTeamGewonnenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTeamVerlorenSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTeamVerloren" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTeamVerlorenSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTeamVerlorenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWedstrijdenSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateWedstrijden" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWedstrijdenSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateWedstrijdenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSpelersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSpelers" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSpelersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSpelersResponse" />
+  </wsdl:message>
   <wsdl:portType name="SoccerManager_WebserviceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -282,6 +395,26 @@
     <wsdl:operation name="SelectWedstrijden">
       <wsdl:input message="tns:SelectWedstrijdenSoapIn" />
       <wsdl:output message="tns:SelectWedstrijdenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGelijk">
+      <wsdl:input message="tns:UpdateTeamGelijkSoapIn" />
+      <wsdl:output message="tns:UpdateTeamGelijkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGewonnen">
+      <wsdl:input message="tns:UpdateTeamGewonnenSoapIn" />
+      <wsdl:output message="tns:UpdateTeamGewonnenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamVerloren">
+      <wsdl:input message="tns:UpdateTeamVerlorenSoapIn" />
+      <wsdl:output message="tns:UpdateTeamVerlorenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWedstrijden">
+      <wsdl:input message="tns:UpdateWedstrijdenSoapIn" />
+      <wsdl:output message="tns:UpdateWedstrijdenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpelers">
+      <wsdl:input message="tns:UpdateSpelersSoapIn" />
+      <wsdl:output message="tns:UpdateSpelersSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="SoccerManager_WebserviceSoap" type="tns:SoccerManager_WebserviceSoap">
@@ -376,6 +509,51 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGelijk">
+      <soap:operation soapAction="http://tempuri.org/UpdateTeamGelijk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGewonnen">
+      <soap:operation soapAction="http://tempuri.org/UpdateTeamGewonnen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamVerloren">
+      <soap:operation soapAction="http://tempuri.org/UpdateTeamVerloren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWedstrijden">
+      <soap:operation soapAction="http://tempuri.org/UpdateWedstrijden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpelers">
+      <soap:operation soapAction="http://tempuri.org/UpdateSpelers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="SoccerManager_WebserviceSoap12" type="tns:SoccerManager_WebserviceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -462,6 +640,51 @@
     </wsdl:operation>
     <wsdl:operation name="SelectWedstrijden">
       <soap12:operation soapAction="http://tempuri.org/SelectWedstrijden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGelijk">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTeamGelijk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamGewonnen">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTeamGewonnen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeamVerloren">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTeamVerloren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWedstrijden">
+      <soap12:operation soapAction="http://tempuri.org/UpdateWedstrijden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpelers">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSpelers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

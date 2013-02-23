@@ -55,6 +55,26 @@ namespace SoccerManager.SoccerWebservice {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectWedstrijden", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet SelectWedstrijden(string gespeeld);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTeamGelijk", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateTeamGelijk(string team, int doel_gemaakt, int doel_tegen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTeamGewonnen", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateTeamGewonnen(string team, int doel_gemaakt, int doel_tegen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTeamVerloren", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateTeamVerloren(string team, int doel_gemaakt, int doel_tegen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateWedstrijden", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateWedstrijden(string match_id, int goals1, int goals2, string opmerking);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSpelers", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateSpelers(string naam, string voornaam, int goals, int geel, int rood);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -122,6 +142,26 @@ namespace SoccerManager.SoccerWebservice {
         
         public System.Data.DataSet SelectWedstrijden(string gespeeld) {
             return base.Channel.SelectWedstrijden(gespeeld);
+        }
+        
+        public bool UpdateTeamGelijk(string team, int doel_gemaakt, int doel_tegen) {
+            return base.Channel.UpdateTeamGelijk(team, doel_gemaakt, doel_tegen);
+        }
+        
+        public bool UpdateTeamGewonnen(string team, int doel_gemaakt, int doel_tegen) {
+            return base.Channel.UpdateTeamGewonnen(team, doel_gemaakt, doel_tegen);
+        }
+        
+        public bool UpdateTeamVerloren(string team, int doel_gemaakt, int doel_tegen) {
+            return base.Channel.UpdateTeamVerloren(team, doel_gemaakt, doel_tegen);
+        }
+        
+        public bool UpdateWedstrijden(string match_id, int goals1, int goals2, string opmerking) {
+            return base.Channel.UpdateWedstrijden(match_id, goals1, goals2, opmerking);
+        }
+        
+        public bool UpdateSpelers(string naam, string voornaam, int goals, int geel, int rood) {
+            return base.Channel.UpdateSpelers(naam, voornaam, goals, geel, rood);
         }
     }
 }

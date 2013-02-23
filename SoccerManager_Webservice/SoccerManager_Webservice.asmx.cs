@@ -178,5 +178,75 @@ namespace SoccerManager_Webservice
             }
 
         }
+
+        [WebMethod]
+        public bool UpdateTeamGelijk(String team, int doel_gemaakt, int doel_tegen)
+        {
+            try
+            {
+
+                return DataAccess.UpdateTeamGelijk(team,doel_gemaakt,doel_tegen);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+         [WebMethod]
+        public bool UpdateTeamGewonnen(String team, int doel_gemaakt, int doel_tegen)
+        {
+            try
+            {
+
+                return DataAccess.UpdateTeamGewonnen(team,doel_gemaakt,doel_tegen);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
+        public bool UpdateTeamVerloren(String team, int doel_gemaakt, int doel_tegen)
+        {
+            try
+            {
+
+                return DataAccess.UpdateTeamVerloren(team,doel_gemaakt,doel_tegen);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
+        public bool UpdateWedstrijden(String match_id, int goals1, int goals2, String opmerking)
+        {
+            try
+            {
+
+                return DataAccess.UpdateWedstrijden(match_id,goals1,goals2,opmerking);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
+        public bool UpdateSpelers(String naam, String voornaam, int goals, int geel, int rood)
+        {
+            try
+            {
+
+                return DataAccess.UpdateSpelers(naam,voornaam,goals,geel,rood);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
     }
 }
