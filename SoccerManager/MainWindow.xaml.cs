@@ -23,7 +23,7 @@ namespace SoccerManager
         public MainWindow()
         {
             InitializeComponent();
-            setIngelogd(false);
+            setKnoppen();
         }
         
 
@@ -33,15 +33,16 @@ namespace SoccerManager
             nieuw.ShowDialog();
             if (nieuw.DialogResult.HasValue && nieuw.DialogResult.Value)
             {
-                setIngelogd(true);
+                Administrator.logIn();
+                setKnoppen();
             }
        
 
         }
-        public void setIngelogd(Boolean antwoord)
+        public void setKnoppen()
         {
-            ingelogd = antwoord;
-            if (ingelogd)
+        
+            if (Administrator.loggedIn())
             {
                 mnu_Afmelden.Visibility = Visibility.Visible;
                 mnu_Nieuw.Visibility = Visibility.Visible;
@@ -62,7 +63,8 @@ namespace SoccerManager
 
         private void mnu_Afmelden_Click(object sender, RoutedEventArgs e)
         {
-            setIngelogd(false);
+            Administrator.logOut();
+            setKnoppen();
         }
 
         /* Zowel nieuw team menu als nieuw team button verwijzen naar de windows form Nieuw_Team */

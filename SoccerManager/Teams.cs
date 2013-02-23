@@ -31,7 +31,7 @@ namespace SoccerManager
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dsTeamGegevens = wsSoccer.SelectTeamGegevens(this.comboBox1.Text);
+            dsTeamGegevens = wsSoccer.SelectTeamGegevens("Racing Genk");
             lbl_verantwoordelijke.Text = dsTeamGegevens.Tables[0].Rows[0]["verantwoordelijke"].ToString();
             lbl_adres.Text = dsTeamGegevens.Tables[0].Rows[0]["straat_nr"].ToString();
             lbl_email.Text = dsTeamGegevens.Tables[0].Rows[0]["email"].ToString();

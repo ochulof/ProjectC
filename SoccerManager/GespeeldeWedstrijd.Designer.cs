@@ -263,7 +263,7 @@
             this.label36.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(439, 138);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(57, 13);
+            this.label36.Size = new System.Drawing.Size(56, 13);
             this.label36.TabIndex = 255;
             this.label36.Text = "Fairplay:";
             // 
@@ -273,7 +273,7 @@
             this.label35.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(125, 136);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(57, 13);
+            this.label35.Size = new System.Drawing.Size(56, 13);
             this.label35.TabIndex = 254;
             this.label35.Text = "Fairplay:";
             // 
@@ -1128,6 +1128,7 @@
             this.button1.TabIndex = 156;
             this.button1.Text = "Wijzigingen doorvoeren";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 

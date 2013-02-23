@@ -81,30 +81,33 @@ namespace SoccerManager
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            int rowIndex = e.RowIndex;
-           // String wedstrijd = dataGridView1.Rows[rowIndex].Cells["Wedstrijdnummer"].Value.ToString();
-            String thuis = dataGridView1.Rows[rowIndex].Cells["team1"].Value.ToString();
-            String uit = dataGridView1.Rows[rowIndex].Cells["team2"].Value.ToString();
 
-            /*
-             * keuze formulier openen om te weten te komen om wedstrijd te bewerken of wedstrijdblad wil afdrukken
-             */
-            Keuze k = new Keuze();
-            k.ShowDialog();
-            string keuze = k.getTerug();
-
-            if (keuze.Equals("bewerk")) //als je de wedstrijd gegevens wil bewerken
+            if (Administrator.loggedIn())
             {
-                GespeeldeWedstrijd gespeeld = new GespeeldeWedstrijd(thuis, uit);
-                if (gespeeld.ShowDialog() == DialogResult.OK)
+                int rowIndex = e.RowIndex;
+                String wedstrijd = dataGridView1.Rows[rowIndex].Cells["match_id"].Value.ToString();
+                String thuis = dataGridView1.Rows[rowIndex].Cells["team1"].Value.ToString();
+                String uit = dataGridView1.Rows[rowIndex].Cells["team2"].Value.ToString();
+
+                /*
+                 * keuze formulier openen om te weten te komen om wedstrijd te bewerken of wedstrijdblad wil afdrukken
+                 */
+                Keuze k = new Keuze();
+                k.ShowDialog();
+                string keuze = k.getTerug();
+
+                if (keuze.Equals("bewerk")) //als je de wedstrijd gegevens wil bewerken
                 {
-                    vulGrid("");
+                    GespeeldeWedstrijd gespeeld = new GespeeldeWedstrijd(thuis, uit, wedstrijd);
+                    if (gespeeld.ShowDialog() == DialogResult.OK)
+                    {
+                        vulGrid("");
+                    }
                 }
-            }
-            else if (keuze.Equals("wedstrijdblad")) //als je het wedstrijdblad van deze wedstrijd wil afdrukken
-            {
-                //printBlad();
+                else if (keuze.Equals("wedstrijdblad")) //als je het wedstrijdblad van deze wedstrijd wil afdrukken
+                {
+                    //printBlad();
+                }
             }
         }
 

@@ -49,6 +49,7 @@ namespace SoccerManager
             int count = Convert.ToInt32(com.ExecuteScalar());
             if (count > 0)
             {
+                Administrator.logIn();
                 DialogResult = true;
             }
             else
