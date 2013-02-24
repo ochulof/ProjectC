@@ -56,6 +56,10 @@ namespace SoccerManager.SoccerWebservice {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet SelectWedstrijden(string gespeeld);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectKlassement", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectKlassement(string poule);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTeamGelijk", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool UpdateTeamGelijk(string team, int doel_gemaakt, int doel_tegen);
@@ -71,6 +75,10 @@ namespace SoccerManager.SoccerWebservice {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateWedstrijden", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool UpdateWedstrijden(string match_id, int goals1, int goals2, string opmerking);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateFinaleWedstrijden", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool UpdateFinaleWedstrijden(string match_id, string team1, string team2, string uur);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSpelers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -144,6 +152,10 @@ namespace SoccerManager.SoccerWebservice {
             return base.Channel.SelectWedstrijden(gespeeld);
         }
         
+        public System.Data.DataSet SelectKlassement(string poule) {
+            return base.Channel.SelectKlassement(poule);
+        }
+        
         public bool UpdateTeamGelijk(string team, int doel_gemaakt, int doel_tegen) {
             return base.Channel.UpdateTeamGelijk(team, doel_gemaakt, doel_tegen);
         }
@@ -158,6 +170,10 @@ namespace SoccerManager.SoccerWebservice {
         
         public bool UpdateWedstrijden(string match_id, int goals1, int goals2, string opmerking) {
             return base.Channel.UpdateWedstrijden(match_id, goals1, goals2, opmerking);
+        }
+        
+        public bool UpdateFinaleWedstrijden(string match_id, string team1, string team2, string uur) {
+            return base.Channel.UpdateFinaleWedstrijden(match_id, team1, team2, uur);
         }
         
         public bool UpdateSpelers(string naam, string voornaam, int goals, int geel, int rood) {

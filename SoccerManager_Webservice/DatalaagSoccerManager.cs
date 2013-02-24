@@ -324,6 +324,48 @@ namespace SoccerManager_Webservice
             return dsSoccer;
         }
 
+        public DataSet SelectKlassement(string poule)
+        {
+            try
+            {
+                Prepare_StoredProcedureCall("SelectKlassement");
+                cmdSoccer.Parameters.AddWithValue("poule", poule);
+                adpSoccer = new SqlDataAdapter(cmdSoccer);
+
+
+
+                adpSoccer.Fill(dsSoccer);
+                sqlTransaction.Commit();
+
+            }
+            catch (SqlException ex)
+            {
+
+                if (sqlTransaction != null)
+                    sqlTransaction.Rollback();
+
+                dsSoccer = null;
+                //Add additional logging
+
+                throw;
+            }
+
+
+            // Close connection
+            try
+            {
+                Finish_StoredProcedureCall();
+            }
+            catch (SqlException ex)
+            {
+                dsSoccer = null;
+                throw;
+            }
+
+            return dsSoccer;
+        }
+
+
         public DataSet SelectWedstrijden(string gespeeld)
         {
             try
@@ -466,6 +508,34 @@ namespace SoccerManager_Webservice
                 cmdSoccer.Parameters.AddWithValue("opmerking", opmerking);
 
 
+                cmdSoccer.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+                bStatus = true;
+            }
+
+            catch (SqlException ex)
+            {
+                sqlTransaction.Rollback();
+                throw;
+
+            }
+
+            Finish_StoredProcedureCall();
+            return bStatus;
+        }
+
+        public bool UpdateFinaleWedstrijden(String match_id, String team1, String team2, String uur)
+        {
+            bool bStatus = false;
+            try
+            {
+                Prepare_StoredProcedureCall("UpdateFinaleWedstrijden");
+
+                cmdSoccer.Parameters.AddWithValue("match_id", match_id);
+                cmdSoccer.Parameters.AddWithValue("team1", team1);
+                cmdSoccer.Parameters.AddWithValue("team2", team2);
+                cmdSoccer.Parameters.AddWithValue("uur", uur);
                 cmdSoccer.ExecuteNonQuery();
 
                 sqlTransaction.Commit();

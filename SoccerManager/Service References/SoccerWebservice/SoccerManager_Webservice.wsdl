@@ -180,6 +180,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectKlassement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="poule" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectKlassementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectKlassementResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="UpdateTeamGelijk">
         <s:complexType>
           <s:sequence>
@@ -242,6 +263,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateWedstrijdenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFinaleWedstrijden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="match_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="team1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="team2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFinaleWedstrijdenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFinaleWedstrijdenResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -325,6 +363,12 @@
   <wsdl:message name="SelectWedstrijdenSoapOut">
     <wsdl:part name="parameters" element="tns:SelectWedstrijdenResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectKlassementSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectKlassement" />
+  </wsdl:message>
+  <wsdl:message name="SelectKlassementSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectKlassementResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateTeamGelijkSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateTeamGelijk" />
   </wsdl:message>
@@ -348,6 +392,12 @@
   </wsdl:message>
   <wsdl:message name="UpdateWedstrijdenSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateWedstrijdenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFinaleWedstrijdenSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFinaleWedstrijden" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFinaleWedstrijdenSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFinaleWedstrijdenResponse" />
   </wsdl:message>
   <wsdl:message name="UpdateSpelersSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateSpelers" />
@@ -396,6 +446,10 @@
       <wsdl:input message="tns:SelectWedstrijdenSoapIn" />
       <wsdl:output message="tns:SelectWedstrijdenSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="SelectKlassement">
+      <wsdl:input message="tns:SelectKlassementSoapIn" />
+      <wsdl:output message="tns:SelectKlassementSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateTeamGelijk">
       <wsdl:input message="tns:UpdateTeamGelijkSoapIn" />
       <wsdl:output message="tns:UpdateTeamGelijkSoapOut" />
@@ -411,6 +465,10 @@
     <wsdl:operation name="UpdateWedstrijden">
       <wsdl:input message="tns:UpdateWedstrijdenSoapIn" />
       <wsdl:output message="tns:UpdateWedstrijdenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFinaleWedstrijden">
+      <wsdl:input message="tns:UpdateFinaleWedstrijdenSoapIn" />
+      <wsdl:output message="tns:UpdateFinaleWedstrijdenSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="UpdateSpelers">
       <wsdl:input message="tns:UpdateSpelersSoapIn" />
@@ -509,6 +567,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectKlassement">
+      <soap:operation soapAction="http://tempuri.org/SelectKlassement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateTeamGelijk">
       <soap:operation soapAction="http://tempuri.org/UpdateTeamGelijk" style="document" />
       <wsdl:input>
@@ -538,6 +605,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateWedstrijden">
       <soap:operation soapAction="http://tempuri.org/UpdateWedstrijden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFinaleWedstrijden">
+      <soap:operation soapAction="http://tempuri.org/UpdateFinaleWedstrijden" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -647,6 +723,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectKlassement">
+      <soap12:operation soapAction="http://tempuri.org/SelectKlassement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateTeamGelijk">
       <soap12:operation soapAction="http://tempuri.org/UpdateTeamGelijk" style="document" />
       <wsdl:input>
@@ -676,6 +761,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateWedstrijden">
       <soap12:operation soapAction="http://tempuri.org/UpdateWedstrijden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFinaleWedstrijden">
+      <soap12:operation soapAction="http://tempuri.org/UpdateFinaleWedstrijden" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

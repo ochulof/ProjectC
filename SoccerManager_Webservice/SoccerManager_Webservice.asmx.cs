@@ -180,6 +180,22 @@ namespace SoccerManager_Webservice
         }
 
         [WebMethod]
+        public DataSet SelectKlassement(String poule)
+        {
+            try
+            {
+
+                return DataAccess.SelectKlassement(poule);
+            }
+            catch (Exception ex)
+            {
+
+                throw (ex);
+            }
+
+        }
+
+        [WebMethod]
         public bool UpdateTeamGelijk(String team, int doel_gemaakt, int doel_tegen)
         {
             try
@@ -228,6 +244,20 @@ namespace SoccerManager_Webservice
             {
 
                 return DataAccess.UpdateWedstrijden(match_id,goals1,goals2,opmerking);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
+        [WebMethod]
+        public bool UpdateFinaleWedstrijden(String match_id, String team1, String team2, String uur)
+        {
+            try
+            {
+
+                return DataAccess.UpdateFinaleWedstrijden(match_id, team1, team2, uur);
             }
             catch (Exception ex)
             {

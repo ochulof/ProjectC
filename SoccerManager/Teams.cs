@@ -46,5 +46,20 @@ namespace SoccerManager
             
                 
         }
+
+        private void btn_vorige_Click(object sender, EventArgs e)
+        {
+            int index = this.comboBox1.SelectedIndex;
+            if(index > 0)
+                this.comboBox1.SelectedIndex = index - 1;
+        }
+
+        private void btn_volgende_Click(object sender, EventArgs e)
+        {
+            int grootte = this.comboBox1.Items.Count;
+            int index = this.comboBox1.SelectedIndex;
+            if(index < grootte - 1)
+                this.comboBox1.SelectedIndex = this.comboBox1.SelectedIndex + 1;
+        }
     }
 }

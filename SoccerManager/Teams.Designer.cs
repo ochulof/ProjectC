@@ -48,6 +48,8 @@
             this.lbl_verantwoordelijke = new System.Windows.Forms.Label();
             this.lbl_poule = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btn_vorige = new System.Windows.Forms.Button();
+            this.btn_volgende = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(18, 230);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 29;
             this.label7.Text = "Telefoon:";
             // 
@@ -125,7 +127,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(18, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 13);
+            this.label3.Size = new System.Drawing.Size(115, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "Verantwoordelijke:";
             // 
@@ -154,9 +156,9 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(93, 317);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 317);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(409, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(561, 237);
             this.dataGridView1.TabIndex = 23;
             // 
             // label1
@@ -166,7 +168,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(185, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "Team: ";
             // 
@@ -231,7 +233,7 @@
             // lbl_poule
             // 
             this.lbl_poule.AutoSize = true;
-            this.lbl_poule.Location = new System.Drawing.Point(416, 293);
+            this.lbl_poule.Location = new System.Drawing.Point(515, 231);
             this.lbl_poule.Name = "lbl_poule";
             this.lbl_poule.Size = new System.Drawing.Size(0, 13);
             this.lbl_poule.TabIndex = 53;
@@ -241,17 +243,39 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 8F);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(357, 293);
+            this.label10.Location = new System.Drawing.Point(456, 231);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 52;
             this.label10.Text = "Poule";
+            // 
+            // btn_vorige
+            // 
+            this.btn_vorige.Location = new System.Drawing.Point(459, 58);
+            this.btn_vorige.Name = "btn_vorige";
+            this.btn_vorige.Size = new System.Drawing.Size(43, 23);
+            this.btn_vorige.TabIndex = 54;
+            this.btn_vorige.Text = "<";
+            this.btn_vorige.UseVisualStyleBackColor = true;
+            this.btn_vorige.Click += new System.EventHandler(this.btn_vorige_Click);
+            // 
+            // btn_volgende
+            // 
+            this.btn_volgende.Location = new System.Drawing.Point(508, 58);
+            this.btn_volgende.Name = "btn_volgende";
+            this.btn_volgende.Size = new System.Drawing.Size(43, 23);
+            this.btn_volgende.TabIndex = 55;
+            this.btn_volgende.Text = ">";
+            this.btn_volgende.UseVisualStyleBackColor = true;
+            this.btn_volgende.Click += new System.EventHandler(this.btn_volgende_Click);
             // 
             // Teams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 578);
+            this.Controls.Add(this.btn_volgende);
+            this.Controls.Add(this.btn_vorige);
             this.Controls.Add(this.lbl_poule);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lbl_email);
@@ -300,5 +324,7 @@
         private System.Windows.Forms.Label lbl_verantwoordelijke;
         private System.Windows.Forms.Label lbl_poule;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_vorige;
+        private System.Windows.Forms.Button btn_volgende;
     }
 }

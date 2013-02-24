@@ -25,7 +25,6 @@ namespace SoccerManager
         private void vulGrid(String gespeeld)
         {
             DsSoccer = wsSoccer.SelectWedstrijden(gespeeld);
-           
             DataTable dataTable = DsSoccer.Tables.Add("wedstrijden");
 
             if (!gespeeld.Equals("niets"))
@@ -66,14 +65,14 @@ namespace SoccerManager
                 if (cb_gespeeld.Checked == true)
                     vulGrid("");
                 else
-                    vulGrid("ja");
+                    vulGrid("nee");
             }
             else if (cb_gespeeld.Checked == true)
             {
                 if (cb_tespelen.Checked == true)
                     vulGrid("");
                 else
-                    vulGrid("nee");
+                    vulGrid("ja");
             }
             else
                 vulGrid("niets");
@@ -109,6 +108,11 @@ namespace SoccerManager
                     //printBlad();
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 
