@@ -53,7 +53,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Verdana", 10F);
-            this.button3.Location = new System.Drawing.Point(354, 542);
+            this.button3.Location = new System.Drawing.Point(327, 515);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 35);
             this.button3.TabIndex = 16;
@@ -114,7 +114,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 10F);
-            this.button1.Location = new System.Drawing.Point(85, 542);
+            this.button1.Location = new System.Drawing.Point(58, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 35);
             this.button1.TabIndex = 11;
@@ -137,7 +137,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 125);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(578, 411);
             this.dataGridView1.TabIndex = 10;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 584);
+            this.ClientSize = new System.Drawing.Size(604, 561);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -157,6 +157,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Wedstrijdschema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wedstrijdschema";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

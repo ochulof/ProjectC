@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 565);
+            this.ClientSize = new System.Drawing.Size(604, 561);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -134,6 +134,7 @@
             this.Controls.Add(this.dataGridViewB);
             this.Controls.Add(this.dataGridViewA);
             this.Name = "Klassement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "klassement";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewA)).EndInit();

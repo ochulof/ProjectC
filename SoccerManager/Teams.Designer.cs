@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 578);
+            this.ClientSize = new System.Drawing.Size(604, 561);
             this.Controls.Add(this.btn_volgende);
             this.Controls.Add(this.btn_vorige);
             this.Controls.Add(this.lbl_poule);
@@ -296,6 +296,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Teams";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teams";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

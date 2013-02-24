@@ -53,7 +53,7 @@
             // tb_tel
             // 
             this.tb_tel.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_tel.Location = new System.Drawing.Point(479, 382);
+            this.tb_tel.Location = new System.Drawing.Point(333, 382);
             this.tb_tel.Name = "tb_tel";
             this.tb_tel.Size = new System.Drawing.Size(175, 20);
             this.tb_tel.TabIndex = 37;
@@ -62,7 +62,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label8.Location = new System.Drawing.Point(392, 433);
+            this.label8.Location = new System.Drawing.Point(97, 433);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 14);
             this.label8.TabIndex = 39;
@@ -71,7 +71,7 @@
             // tb_mail
             // 
             this.tb_mail.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_mail.Location = new System.Drawing.Point(479, 431);
+            this.tb_mail.Location = new System.Drawing.Point(333, 431);
             this.tb_mail.Name = "tb_mail";
             this.tb_mail.Size = new System.Drawing.Size(175, 20);
             this.tb_mail.TabIndex = 38;
@@ -79,7 +79,7 @@
             // tb_plaats
             // 
             this.tb_plaats.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_plaats.Location = new System.Drawing.Point(479, 333);
+            this.tb_plaats.Location = new System.Drawing.Point(333, 333);
             this.tb_plaats.Name = "tb_plaats";
             this.tb_plaats.Size = new System.Drawing.Size(175, 20);
             this.tb_plaats.TabIndex = 36;
@@ -87,7 +87,7 @@
             // tb_postcode
             // 
             this.tb_postcode.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_postcode.Location = new System.Drawing.Point(479, 284);
+            this.tb_postcode.Location = new System.Drawing.Point(333, 284);
             this.tb_postcode.Name = "tb_postcode";
             this.tb_postcode.Size = new System.Drawing.Size(175, 20);
             this.tb_postcode.TabIndex = 35;
@@ -95,7 +95,7 @@
             // tb_straat
             // 
             this.tb_straat.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_straat.Location = new System.Drawing.Point(479, 235);
+            this.tb_straat.Location = new System.Drawing.Point(333, 235);
             this.tb_straat.Name = "tb_straat";
             this.tb_straat.Size = new System.Drawing.Size(175, 20);
             this.tb_straat.TabIndex = 34;
@@ -103,7 +103,7 @@
             // tb_verantwoordelijke
             // 
             this.tb_verantwoordelijke.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_verantwoordelijke.Location = new System.Drawing.Point(479, 186);
+            this.tb_verantwoordelijke.Location = new System.Drawing.Point(333, 186);
             this.tb_verantwoordelijke.Name = "tb_verantwoordelijke";
             this.tb_verantwoordelijke.Size = new System.Drawing.Size(175, 20);
             this.tb_verantwoordelijke.TabIndex = 33;
@@ -111,7 +111,7 @@
             // tb_team
             // 
             this.tb_team.Font = new System.Drawing.Font("Verdana", 8F);
-            this.tb_team.Location = new System.Drawing.Point(479, 137);
+            this.tb_team.Location = new System.Drawing.Point(333, 137);
             this.tb_team.Name = "tb_team";
             this.tb_team.Size = new System.Drawing.Size(175, 20);
             this.tb_team.TabIndex = 32;
@@ -120,9 +120,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label7.Location = new System.Drawing.Point(373, 384);
+            this.label7.Location = new System.Drawing.Point(97, 384);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 14);
+            this.label7.Size = new System.Drawing.Size(64, 14);
             this.label7.TabIndex = 31;
             this.label7.Text = "Tel / GSM";
             // 
@@ -130,9 +130,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label6.Location = new System.Drawing.Point(243, 188);
+            this.label6.Location = new System.Drawing.Point(97, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 14);
+            this.label6.Size = new System.Drawing.Size(194, 14);
             this.label6.TabIndex = 30;
             this.label6.Text = "Naam Teamverantwoordelijke";
             // 
@@ -140,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label5.Location = new System.Drawing.Point(391, 335);
+            this.label5.Location = new System.Drawing.Point(97, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 14);
             this.label5.TabIndex = 29;
@@ -150,7 +150,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label4.Location = new System.Drawing.Point(372, 286);
+            this.label4.Location = new System.Drawing.Point(97, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 14);
             this.label4.TabIndex = 28;
@@ -160,7 +160,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label2.Location = new System.Drawing.Point(315, 237);
+            this.label2.Location = new System.Drawing.Point(97, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 14);
             this.label2.TabIndex = 27;
@@ -170,9 +170,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F);
-            this.label1.Location = new System.Drawing.Point(362, 139);
+            this.label1.Location = new System.Drawing.Point(97, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 14);
+            this.label1.Size = new System.Drawing.Size(75, 14);
             this.label1.TabIndex = 26;
             this.label1.Text = "Teamnaam";
             // 
@@ -180,7 +180,7 @@
             // 
             this.lbl_team.AutoSize = true;
             this.lbl_team.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.lbl_team.Location = new System.Drawing.Point(338, 30);
+            this.lbl_team.Location = new System.Drawing.Point(181, 30);
             this.lbl_team.Name = "lbl_team";
             this.lbl_team.Size = new System.Drawing.Size(243, 46);
             this.lbl_team.TabIndex = 25;
@@ -190,7 +190,7 @@
             // 
             this.btn_annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_annuleren.Font = new System.Drawing.Font("Verdana", 10F);
-            this.btn_annuleren.Location = new System.Drawing.Point(479, 483);
+            this.btn_annuleren.Location = new System.Drawing.Point(362, 483);
             this.btn_annuleren.Name = "btn_annuleren";
             this.btn_annuleren.Size = new System.Drawing.Size(220, 35);
             this.btn_annuleren.TabIndex = 41;
@@ -201,7 +201,7 @@
             // 
             this.btn_toevoegen.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_toevoegen.Font = new System.Drawing.Font("Verdana", 10F);
-            this.btn_toevoegen.Location = new System.Drawing.Point(140, 483);
+            this.btn_toevoegen.Location = new System.Drawing.Point(23, 483);
             this.btn_toevoegen.Name = "btn_toevoegen";
             this.btn_toevoegen.Size = new System.Drawing.Size(220, 35);
             this.btn_toevoegen.TabIndex = 40;
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 549);
+            this.ClientSize = new System.Drawing.Size(604, 561);
             this.Controls.Add(this.btn_annuleren);
             this.Controls.Add(this.btn_toevoegen);
             this.Controls.Add(this.tb_tel);
@@ -237,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_team);
             this.Name = "Nieuw_Team";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nieuw team toevoegen";
             this.Load += new System.EventHandler(this.Nieuw_Team_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();

@@ -30,10 +30,6 @@
         {
             this.tb_opmerking = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.fp_uit = new System.Windows.Forms.TextBox();
-            this.fp_thuis = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.numericUpDown37 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown38 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown39 = new System.Windows.Forms.NumericUpDown();
@@ -225,7 +221,7 @@
             // 
             // tb_opmerking
             // 
-            this.tb_opmerking.Location = new System.Drawing.Point(125, 525);
+            this.tb_opmerking.Location = new System.Drawing.Point(96, 499);
             this.tb_opmerking.Multiline = true;
             this.tb_opmerking.Name = "tb_opmerking";
             this.tb_opmerking.Size = new System.Drawing.Size(256, 35);
@@ -235,296 +231,260 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(36, 525);
+            this.label37.Location = new System.Drawing.Point(7, 499);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(97, 13);
             this.label37.TabIndex = 258;
             this.label37.Text = "Opmerkingen:  ";
             // 
-            // fp_uit
-            // 
-            this.fp_uit.Location = new System.Drawing.Point(501, 135);
-            this.fp_uit.Name = "fp_uit";
-            this.fp_uit.PasswordChar = '*';
-            this.fp_uit.Size = new System.Drawing.Size(35, 20);
-            this.fp_uit.TabIndex = 257;
-            // 
-            // fp_thuis
-            // 
-            this.fp_thuis.Location = new System.Drawing.Point(182, 135);
-            this.fp_thuis.Name = "fp_thuis";
-            this.fp_thuis.PasswordChar = '*';
-            this.fp_thuis.Size = new System.Drawing.Size(35, 20);
-            this.fp_thuis.TabIndex = 256;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(439, 138);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(56, 13);
-            this.label36.TabIndex = 255;
-            this.label36.Text = "Fairplay:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(125, 136);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(56, 13);
-            this.label35.TabIndex = 254;
-            this.label35.Text = "Fairplay:";
-            // 
             // numericUpDown37
             // 
-            this.numericUpDown37.Location = new System.Drawing.Point(494, 198);
+            this.numericUpDown37.Location = new System.Drawing.Point(465, 172);
             this.numericUpDown37.Name = "numericUpDown37";
             this.numericUpDown37.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown37.TabIndex = 253;
             // 
             // numericUpDown38
             // 
-            this.numericUpDown38.Location = new System.Drawing.Point(494, 226);
+            this.numericUpDown38.Location = new System.Drawing.Point(465, 200);
             this.numericUpDown38.Name = "numericUpDown38";
             this.numericUpDown38.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown38.TabIndex = 252;
             // 
             // numericUpDown39
             // 
-            this.numericUpDown39.Location = new System.Drawing.Point(494, 252);
+            this.numericUpDown39.Location = new System.Drawing.Point(465, 226);
             this.numericUpDown39.Name = "numericUpDown39";
             this.numericUpDown39.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown39.TabIndex = 251;
             // 
             // numericUpDown40
             // 
-            this.numericUpDown40.Location = new System.Drawing.Point(494, 276);
+            this.numericUpDown40.Location = new System.Drawing.Point(465, 250);
             this.numericUpDown40.Name = "numericUpDown40";
             this.numericUpDown40.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown40.TabIndex = 250;
             // 
             // numericUpDown41
             // 
-            this.numericUpDown41.Location = new System.Drawing.Point(494, 302);
+            this.numericUpDown41.Location = new System.Drawing.Point(465, 276);
             this.numericUpDown41.Name = "numericUpDown41";
             this.numericUpDown41.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown41.TabIndex = 249;
             // 
             // numericUpDown42
             // 
-            this.numericUpDown42.Location = new System.Drawing.Point(494, 331);
+            this.numericUpDown42.Location = new System.Drawing.Point(465, 305);
             this.numericUpDown42.Name = "numericUpDown42";
             this.numericUpDown42.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown42.TabIndex = 248;
             // 
             // numericUpDown43
             // 
-            this.numericUpDown43.Location = new System.Drawing.Point(494, 357);
+            this.numericUpDown43.Location = new System.Drawing.Point(465, 331);
             this.numericUpDown43.Name = "numericUpDown43";
             this.numericUpDown43.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown43.TabIndex = 247;
             // 
             // numericUpDown44
             // 
-            this.numericUpDown44.Location = new System.Drawing.Point(494, 379);
+            this.numericUpDown44.Location = new System.Drawing.Point(465, 353);
             this.numericUpDown44.Name = "numericUpDown44";
             this.numericUpDown44.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown44.TabIndex = 246;
             // 
             // numericUpDown45
             // 
-            this.numericUpDown45.Location = new System.Drawing.Point(494, 405);
+            this.numericUpDown45.Location = new System.Drawing.Point(465, 379);
             this.numericUpDown45.Name = "numericUpDown45";
             this.numericUpDown45.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown45.TabIndex = 245;
             // 
             // numericUpDown46
             // 
-            this.numericUpDown46.Location = new System.Drawing.Point(494, 432);
+            this.numericUpDown46.Location = new System.Drawing.Point(465, 406);
             this.numericUpDown46.Name = "numericUpDown46";
             this.numericUpDown46.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown46.TabIndex = 244;
             // 
             // numericUpDown47
             // 
-            this.numericUpDown47.Location = new System.Drawing.Point(494, 457);
+            this.numericUpDown47.Location = new System.Drawing.Point(465, 431);
             this.numericUpDown47.Name = "numericUpDown47";
             this.numericUpDown47.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown47.TabIndex = 243;
             // 
             // numericUpDown48
             // 
-            this.numericUpDown48.Location = new System.Drawing.Point(494, 484);
+            this.numericUpDown48.Location = new System.Drawing.Point(465, 458);
             this.numericUpDown48.Name = "numericUpDown48";
             this.numericUpDown48.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown48.TabIndex = 242;
             // 
             // numericUpDown49
             // 
-            this.numericUpDown49.Location = new System.Drawing.Point(543, 198);
+            this.numericUpDown49.Location = new System.Drawing.Point(514, 172);
             this.numericUpDown49.Name = "numericUpDown49";
             this.numericUpDown49.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown49.TabIndex = 241;
             // 
             // numericUpDown50
             // 
-            this.numericUpDown50.Location = new System.Drawing.Point(543, 226);
+            this.numericUpDown50.Location = new System.Drawing.Point(514, 200);
             this.numericUpDown50.Name = "numericUpDown50";
             this.numericUpDown50.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown50.TabIndex = 240;
             // 
             // numericUpDown51
             // 
-            this.numericUpDown51.Location = new System.Drawing.Point(543, 252);
+            this.numericUpDown51.Location = new System.Drawing.Point(514, 226);
             this.numericUpDown51.Name = "numericUpDown51";
             this.numericUpDown51.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown51.TabIndex = 239;
             // 
             // numericUpDown52
             // 
-            this.numericUpDown52.Location = new System.Drawing.Point(543, 276);
+            this.numericUpDown52.Location = new System.Drawing.Point(514, 250);
             this.numericUpDown52.Name = "numericUpDown52";
             this.numericUpDown52.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown52.TabIndex = 238;
             // 
             // numericUpDown53
             // 
-            this.numericUpDown53.Location = new System.Drawing.Point(543, 302);
+            this.numericUpDown53.Location = new System.Drawing.Point(514, 276);
             this.numericUpDown53.Name = "numericUpDown53";
             this.numericUpDown53.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown53.TabIndex = 237;
             // 
             // numericUpDown54
             // 
-            this.numericUpDown54.Location = new System.Drawing.Point(543, 331);
+            this.numericUpDown54.Location = new System.Drawing.Point(514, 305);
             this.numericUpDown54.Name = "numericUpDown54";
             this.numericUpDown54.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown54.TabIndex = 236;
             // 
             // numericUpDown55
             // 
-            this.numericUpDown55.Location = new System.Drawing.Point(543, 357);
+            this.numericUpDown55.Location = new System.Drawing.Point(514, 331);
             this.numericUpDown55.Name = "numericUpDown55";
             this.numericUpDown55.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown55.TabIndex = 235;
             // 
             // numericUpDown56
             // 
-            this.numericUpDown56.Location = new System.Drawing.Point(543, 379);
+            this.numericUpDown56.Location = new System.Drawing.Point(514, 353);
             this.numericUpDown56.Name = "numericUpDown56";
             this.numericUpDown56.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown56.TabIndex = 234;
             // 
             // numericUpDown57
             // 
-            this.numericUpDown57.Location = new System.Drawing.Point(543, 405);
+            this.numericUpDown57.Location = new System.Drawing.Point(514, 379);
             this.numericUpDown57.Name = "numericUpDown57";
             this.numericUpDown57.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown57.TabIndex = 233;
             // 
             // numericUpDown58
             // 
-            this.numericUpDown58.Location = new System.Drawing.Point(543, 432);
+            this.numericUpDown58.Location = new System.Drawing.Point(514, 406);
             this.numericUpDown58.Name = "numericUpDown58";
             this.numericUpDown58.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown58.TabIndex = 232;
             // 
             // numericUpDown59
             // 
-            this.numericUpDown59.Location = new System.Drawing.Point(543, 457);
+            this.numericUpDown59.Location = new System.Drawing.Point(514, 431);
             this.numericUpDown59.Name = "numericUpDown59";
             this.numericUpDown59.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown59.TabIndex = 231;
             // 
             // numericUpDown60
             // 
-            this.numericUpDown60.Location = new System.Drawing.Point(543, 484);
+            this.numericUpDown60.Location = new System.Drawing.Point(514, 458);
             this.numericUpDown60.Name = "numericUpDown60";
             this.numericUpDown60.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown60.TabIndex = 230;
             // 
             // numericUpDown61
             // 
-            this.numericUpDown61.Location = new System.Drawing.Point(584, 198);
+            this.numericUpDown61.Location = new System.Drawing.Point(555, 172);
             this.numericUpDown61.Name = "numericUpDown61";
             this.numericUpDown61.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown61.TabIndex = 229;
             // 
             // numericUpDown62
             // 
-            this.numericUpDown62.Location = new System.Drawing.Point(584, 226);
+            this.numericUpDown62.Location = new System.Drawing.Point(555, 200);
             this.numericUpDown62.Name = "numericUpDown62";
             this.numericUpDown62.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown62.TabIndex = 228;
             // 
             // numericUpDown63
             // 
-            this.numericUpDown63.Location = new System.Drawing.Point(584, 252);
+            this.numericUpDown63.Location = new System.Drawing.Point(555, 226);
             this.numericUpDown63.Name = "numericUpDown63";
             this.numericUpDown63.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown63.TabIndex = 227;
             // 
             // numericUpDown64
             // 
-            this.numericUpDown64.Location = new System.Drawing.Point(584, 276);
+            this.numericUpDown64.Location = new System.Drawing.Point(555, 250);
             this.numericUpDown64.Name = "numericUpDown64";
             this.numericUpDown64.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown64.TabIndex = 226;
             // 
             // numericUpDown65
             // 
-            this.numericUpDown65.Location = new System.Drawing.Point(584, 302);
+            this.numericUpDown65.Location = new System.Drawing.Point(555, 276);
             this.numericUpDown65.Name = "numericUpDown65";
             this.numericUpDown65.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown65.TabIndex = 225;
             // 
             // numericUpDown66
             // 
-            this.numericUpDown66.Location = new System.Drawing.Point(584, 331);
+            this.numericUpDown66.Location = new System.Drawing.Point(555, 305);
             this.numericUpDown66.Name = "numericUpDown66";
             this.numericUpDown66.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown66.TabIndex = 224;
             // 
             // numericUpDown67
             // 
-            this.numericUpDown67.Location = new System.Drawing.Point(584, 357);
+            this.numericUpDown67.Location = new System.Drawing.Point(555, 331);
             this.numericUpDown67.Name = "numericUpDown67";
             this.numericUpDown67.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown67.TabIndex = 223;
             // 
             // numericUpDown68
             // 
-            this.numericUpDown68.Location = new System.Drawing.Point(584, 379);
+            this.numericUpDown68.Location = new System.Drawing.Point(555, 353);
             this.numericUpDown68.Name = "numericUpDown68";
             this.numericUpDown68.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown68.TabIndex = 222;
             // 
             // numericUpDown69
             // 
-            this.numericUpDown69.Location = new System.Drawing.Point(584, 405);
+            this.numericUpDown69.Location = new System.Drawing.Point(555, 379);
             this.numericUpDown69.Name = "numericUpDown69";
             this.numericUpDown69.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown69.TabIndex = 221;
             // 
             // numericUpDown70
             // 
-            this.numericUpDown70.Location = new System.Drawing.Point(584, 432);
+            this.numericUpDown70.Location = new System.Drawing.Point(555, 406);
             this.numericUpDown70.Name = "numericUpDown70";
             this.numericUpDown70.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown70.TabIndex = 220;
             // 
             // numericUpDown71
             // 
-            this.numericUpDown71.Location = new System.Drawing.Point(584, 457);
+            this.numericUpDown71.Location = new System.Drawing.Point(555, 431);
             this.numericUpDown71.Name = "numericUpDown71";
             this.numericUpDown71.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown71.TabIndex = 219;
             // 
             // numericUpDown72
             // 
-            this.numericUpDown72.Location = new System.Drawing.Point(584, 484);
+            this.numericUpDown72.Location = new System.Drawing.Point(555, 458);
             this.numericUpDown72.Name = "numericUpDown72";
             this.numericUpDown72.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown72.TabIndex = 218;
@@ -544,7 +504,7 @@
             this.panel_thuis.Controls.Add(this.label12);
             this.panel_thuis.Controls.Add(this.label11);
             this.panel_thuis.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_thuis.Location = new System.Drawing.Point(37, 198);
+            this.panel_thuis.Location = new System.Drawing.Point(8, 172);
             this.panel_thuis.Name = "panel_thuis";
             this.panel_thuis.Size = new System.Drawing.Size(123, 309);
             this.panel_thuis.TabIndex = 217;
@@ -650,7 +610,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(356, 491);
+            this.label34.Location = new System.Drawing.Point(327, 465);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(0, 13);
             this.label34.TabIndex = 216;
@@ -659,7 +619,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(356, 464);
+            this.label33.Location = new System.Drawing.Point(327, 438);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(0, 13);
             this.label33.TabIndex = 215;
@@ -668,7 +628,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(356, 439);
+            this.label32.Location = new System.Drawing.Point(327, 413);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(0, 13);
             this.label32.TabIndex = 214;
@@ -677,7 +637,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(356, 412);
+            this.label31.Location = new System.Drawing.Point(327, 386);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(0, 13);
             this.label31.TabIndex = 213;
@@ -686,7 +646,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(356, 386);
+            this.label30.Location = new System.Drawing.Point(327, 360);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(0, 13);
             this.label30.TabIndex = 212;
@@ -695,7 +655,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(356, 364);
+            this.label29.Location = new System.Drawing.Point(327, 338);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(0, 13);
             this.label29.TabIndex = 211;
@@ -704,7 +664,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(356, 338);
+            this.label28.Location = new System.Drawing.Point(327, 312);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(0, 13);
             this.label28.TabIndex = 210;
@@ -713,7 +673,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(356, 309);
+            this.label27.Location = new System.Drawing.Point(327, 283);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(0, 13);
             this.label27.TabIndex = 209;
@@ -722,7 +682,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(356, 283);
+            this.label26.Location = new System.Drawing.Point(327, 257);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(0, 13);
             this.label26.TabIndex = 208;
@@ -731,7 +691,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(356, 259);
+            this.label25.Location = new System.Drawing.Point(327, 233);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(0, 13);
             this.label25.TabIndex = 207;
@@ -740,7 +700,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(356, 233);
+            this.label24.Location = new System.Drawing.Point(327, 207);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(0, 13);
             this.label24.TabIndex = 206;
@@ -749,259 +709,259 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(356, 205);
+            this.label23.Location = new System.Drawing.Point(327, 179);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(0, 13);
             this.label23.TabIndex = 205;
             // 
             // numericUpDown25
             // 
-            this.numericUpDown25.Location = new System.Drawing.Point(263, 198);
+            this.numericUpDown25.Location = new System.Drawing.Point(234, 172);
             this.numericUpDown25.Name = "numericUpDown25";
             this.numericUpDown25.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown25.TabIndex = 204;
             // 
             // numericUpDown26
             // 
-            this.numericUpDown26.Location = new System.Drawing.Point(263, 226);
+            this.numericUpDown26.Location = new System.Drawing.Point(234, 200);
             this.numericUpDown26.Name = "numericUpDown26";
             this.numericUpDown26.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown26.TabIndex = 203;
             // 
             // numericUpDown27
             // 
-            this.numericUpDown27.Location = new System.Drawing.Point(263, 252);
+            this.numericUpDown27.Location = new System.Drawing.Point(234, 226);
             this.numericUpDown27.Name = "numericUpDown27";
             this.numericUpDown27.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown27.TabIndex = 202;
             // 
             // numericUpDown28
             // 
-            this.numericUpDown28.Location = new System.Drawing.Point(263, 276);
+            this.numericUpDown28.Location = new System.Drawing.Point(234, 250);
             this.numericUpDown28.Name = "numericUpDown28";
             this.numericUpDown28.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown28.TabIndex = 201;
             // 
             // numericUpDown29
             // 
-            this.numericUpDown29.Location = new System.Drawing.Point(263, 302);
+            this.numericUpDown29.Location = new System.Drawing.Point(234, 276);
             this.numericUpDown29.Name = "numericUpDown29";
             this.numericUpDown29.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown29.TabIndex = 200;
             // 
             // numericUpDown30
             // 
-            this.numericUpDown30.Location = new System.Drawing.Point(263, 331);
+            this.numericUpDown30.Location = new System.Drawing.Point(234, 305);
             this.numericUpDown30.Name = "numericUpDown30";
             this.numericUpDown30.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown30.TabIndex = 199;
             // 
             // numericUpDown31
             // 
-            this.numericUpDown31.Location = new System.Drawing.Point(263, 357);
+            this.numericUpDown31.Location = new System.Drawing.Point(234, 331);
             this.numericUpDown31.Name = "numericUpDown31";
             this.numericUpDown31.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown31.TabIndex = 198;
             // 
             // numericUpDown32
             // 
-            this.numericUpDown32.Location = new System.Drawing.Point(263, 379);
+            this.numericUpDown32.Location = new System.Drawing.Point(234, 353);
             this.numericUpDown32.Name = "numericUpDown32";
             this.numericUpDown32.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown32.TabIndex = 197;
             // 
             // numericUpDown33
             // 
-            this.numericUpDown33.Location = new System.Drawing.Point(263, 405);
+            this.numericUpDown33.Location = new System.Drawing.Point(234, 379);
             this.numericUpDown33.Name = "numericUpDown33";
             this.numericUpDown33.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown33.TabIndex = 196;
             // 
             // numericUpDown34
             // 
-            this.numericUpDown34.Location = new System.Drawing.Point(263, 432);
+            this.numericUpDown34.Location = new System.Drawing.Point(234, 406);
             this.numericUpDown34.Name = "numericUpDown34";
             this.numericUpDown34.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown34.TabIndex = 195;
             // 
             // numericUpDown35
             // 
-            this.numericUpDown35.Location = new System.Drawing.Point(263, 457);
+            this.numericUpDown35.Location = new System.Drawing.Point(234, 431);
             this.numericUpDown35.Name = "numericUpDown35";
             this.numericUpDown35.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown35.TabIndex = 194;
             // 
             // numericUpDown36
             // 
-            this.numericUpDown36.Location = new System.Drawing.Point(263, 484);
+            this.numericUpDown36.Location = new System.Drawing.Point(234, 458);
             this.numericUpDown36.Name = "numericUpDown36";
             this.numericUpDown36.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown36.TabIndex = 193;
             // 
             // numericUpDown13
             // 
-            this.numericUpDown13.Location = new System.Drawing.Point(222, 198);
+            this.numericUpDown13.Location = new System.Drawing.Point(193, 172);
             this.numericUpDown13.Name = "numericUpDown13";
             this.numericUpDown13.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown13.TabIndex = 192;
             // 
             // numericUpDown14
             // 
-            this.numericUpDown14.Location = new System.Drawing.Point(222, 226);
+            this.numericUpDown14.Location = new System.Drawing.Point(193, 200);
             this.numericUpDown14.Name = "numericUpDown14";
             this.numericUpDown14.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown14.TabIndex = 191;
             // 
             // numericUpDown15
             // 
-            this.numericUpDown15.Location = new System.Drawing.Point(222, 252);
+            this.numericUpDown15.Location = new System.Drawing.Point(193, 226);
             this.numericUpDown15.Name = "numericUpDown15";
             this.numericUpDown15.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown15.TabIndex = 190;
             // 
             // numericUpDown16
             // 
-            this.numericUpDown16.Location = new System.Drawing.Point(222, 276);
+            this.numericUpDown16.Location = new System.Drawing.Point(193, 250);
             this.numericUpDown16.Name = "numericUpDown16";
             this.numericUpDown16.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown16.TabIndex = 189;
             // 
             // numericUpDown17
             // 
-            this.numericUpDown17.Location = new System.Drawing.Point(222, 302);
+            this.numericUpDown17.Location = new System.Drawing.Point(193, 276);
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown17.TabIndex = 188;
             // 
             // numericUpDown18
             // 
-            this.numericUpDown18.Location = new System.Drawing.Point(222, 331);
+            this.numericUpDown18.Location = new System.Drawing.Point(193, 305);
             this.numericUpDown18.Name = "numericUpDown18";
             this.numericUpDown18.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown18.TabIndex = 187;
             // 
             // numericUpDown19
             // 
-            this.numericUpDown19.Location = new System.Drawing.Point(222, 357);
+            this.numericUpDown19.Location = new System.Drawing.Point(193, 331);
             this.numericUpDown19.Name = "numericUpDown19";
             this.numericUpDown19.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown19.TabIndex = 186;
             // 
             // numericUpDown20
             // 
-            this.numericUpDown20.Location = new System.Drawing.Point(222, 379);
+            this.numericUpDown20.Location = new System.Drawing.Point(193, 353);
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown20.TabIndex = 185;
             // 
             // numericUpDown21
             // 
-            this.numericUpDown21.Location = new System.Drawing.Point(222, 405);
+            this.numericUpDown21.Location = new System.Drawing.Point(193, 379);
             this.numericUpDown21.Name = "numericUpDown21";
             this.numericUpDown21.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown21.TabIndex = 184;
             // 
             // numericUpDown22
             // 
-            this.numericUpDown22.Location = new System.Drawing.Point(222, 432);
+            this.numericUpDown22.Location = new System.Drawing.Point(193, 406);
             this.numericUpDown22.Name = "numericUpDown22";
             this.numericUpDown22.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown22.TabIndex = 183;
             // 
             // numericUpDown23
             // 
-            this.numericUpDown23.Location = new System.Drawing.Point(222, 457);
+            this.numericUpDown23.Location = new System.Drawing.Point(193, 431);
             this.numericUpDown23.Name = "numericUpDown23";
             this.numericUpDown23.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown23.TabIndex = 182;
             // 
             // numericUpDown24
             // 
-            this.numericUpDown24.Location = new System.Drawing.Point(222, 484);
+            this.numericUpDown24.Location = new System.Drawing.Point(193, 458);
             this.numericUpDown24.Name = "numericUpDown24";
             this.numericUpDown24.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown24.TabIndex = 181;
             // 
             // numericUpDown11
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(170, 457);
+            this.numericUpDown11.Location = new System.Drawing.Point(141, 431);
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown11.TabIndex = 180;
             // 
             // numericUpDown12
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(170, 484);
+            this.numericUpDown12.Location = new System.Drawing.Point(141, 458);
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown12.TabIndex = 179;
             // 
             // numericUpDown10
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(170, 432);
+            this.numericUpDown10.Location = new System.Drawing.Point(141, 406);
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown10.TabIndex = 178;
             // 
             // numericUpDown7
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(170, 357);
+            this.numericUpDown7.Location = new System.Drawing.Point(141, 331);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown7.TabIndex = 177;
             // 
             // numericUpDown8
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(170, 379);
+            this.numericUpDown8.Location = new System.Drawing.Point(141, 353);
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown8.TabIndex = 176;
             // 
             // numericUpDown9
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(170, 405);
+            this.numericUpDown9.Location = new System.Drawing.Point(141, 379);
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown9.TabIndex = 175;
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(170, 276);
+            this.numericUpDown4.Location = new System.Drawing.Point(141, 250);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown4.TabIndex = 174;
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(170, 302);
+            this.numericUpDown5.Location = new System.Drawing.Point(141, 276);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown5.TabIndex = 173;
             // 
             // numericUpDown6
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(170, 331);
+            this.numericUpDown6.Location = new System.Drawing.Point(141, 305);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown6.TabIndex = 172;
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(170, 252);
+            this.numericUpDown3.Location = new System.Drawing.Point(141, 226);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown3.TabIndex = 171;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(170, 226);
+            this.numericUpDown2.Location = new System.Drawing.Point(141, 200);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown2.TabIndex = 170;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(170, 198);
+            this.numericUpDown1.Location = new System.Drawing.Point(141, 172);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(32, 20);
             this.numericUpDown1.TabIndex = 169;
@@ -1010,7 +970,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(581, 172);
+            this.label7.Location = new System.Drawing.Point(552, 146);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 168;
@@ -1020,7 +980,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(542, 172);
+            this.label8.Location = new System.Drawing.Point(513, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 167;
@@ -1030,7 +990,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(463, 172);
+            this.label9.Location = new System.Drawing.Point(434, 146);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 13);
             this.label9.TabIndex = 166;
@@ -1040,7 +1000,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(356, 172);
+            this.label10.Location = new System.Drawing.Point(327, 146);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 13);
             this.label10.TabIndex = 165;
@@ -1050,7 +1010,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(264, 172);
+            this.label6.Location = new System.Drawing.Point(235, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 164;
@@ -1060,7 +1020,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(223, 172);
+            this.label5.Location = new System.Drawing.Point(194, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 163;
@@ -1070,7 +1030,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(141, 172);
+            this.label4.Location = new System.Drawing.Point(112, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 162;
@@ -1080,7 +1040,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 172);
+            this.label3.Location = new System.Drawing.Point(13, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 161;
@@ -1122,7 +1082,7 @@
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.button1.Location = new System.Drawing.Point(406, 525);
+            this.button1.Location = new System.Drawing.Point(377, 499);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 35);
             this.button1.TabIndex = 156;
@@ -1154,13 +1114,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 596);
+            this.ClientSize = new System.Drawing.Size(604, 561);
             this.Controls.Add(this.tb_opmerking);
             this.Controls.Add(this.label37);
-            this.Controls.Add(this.fp_uit);
-            this.Controls.Add(this.fp_thuis);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
             this.Controls.Add(this.numericUpDown37);
             this.Controls.Add(this.numericUpDown38);
             this.Controls.Add(this.numericUpDown39);
@@ -1348,10 +1304,6 @@
 
         private System.Windows.Forms.TextBox tb_opmerking;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox fp_uit;
-        private System.Windows.Forms.TextBox fp_thuis;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.NumericUpDown numericUpDown37;
         private System.Windows.Forms.NumericUpDown numericUpDown38;
         private System.Windows.Forms.NumericUpDown numericUpDown39;

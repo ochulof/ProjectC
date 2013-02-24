@@ -1,7 +1,7 @@
 ﻿<Window x:Name="Soccer_Manager_" x:Class="SoccerManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Welkom bij Soccer Manager" Height="372.993" Width="520">
+        Title="Welkom bij Soccer Manager" Height="372.993" Width="520" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF658097">
     <Grid HorizontalAlignment="Left" Height="325" VerticalAlignment="Top" Width="520">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -30,15 +30,11 @@
             </MenuItem>
             <MenuItem x:Name="mnu_Help" Header="Help" ToolTip="Toon Hulp" Click="mnu_Help_Click"/>
         </Menu>
-        <Button x:Name="btn_wedstrijdschema" Content="Wedstrijdschema" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Center" Height="80" ToolTip="Toon het wedstrijdschema" Click="btn_wedstrijdschema_Click" Width="150" FontFamily="Arial" FontSize="16" RenderTransformOrigin="0.5,0.5">
-            <Button.Effect>
-                <DropShadowEffect BlurRadius="0" Color="#FFC55050"/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="btn_klassement" Content="Klassement" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon het klassement" Click="btn_klassement_Click"/>
-        <Button x:Name="btn_teams" Content="Teams" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon teams" Grid.Column="1" Click="btn_teams_Click"/>
-        <Button x:Name="btn_spelerslijst" Content="Spelerslijst" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon de spelerslijst" Grid.Column="1" Click="btn_spelerslijst_Click"/>
-        <Button x:Name="btn_nieuw_team" Content="Nieuw Team" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak een nieuw team" Click="btn_nieuw_team_Click"/>
-        <Button x:Name="btn_nieuwe_spelers" Content="Nieuwe spelers" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak nieuwe spelers" Grid.Column="1" Click="btn_nieuwe_spelers_Click"/>
+        <Button x:Name="btn_wedstrijdschema" Content="Wedstrijdschema" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" Height="80" ToolTip="Toon het wedstrijdschema" Click="btn_wedstrijdschema_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btn_klassement" Content="Klassement" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon het klassement" Click="btn_klassement_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btn_teams" Content="Teams" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon teams" Grid.Column="1" Click="btn_teams_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btn_spelerslijst" Content="Spelerslijst" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Toon de spelerslijst" Grid.Column="1" Click="btn_spelerslijst_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btn_nieuw_team" Content="Nieuw Team" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak een nieuw team" Click="btn_nieuw_team_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btn_nieuwe_spelers" Content="Nieuwe spelers" HorizontalAlignment="Left" Margin="50,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="80" ToolTip="Maak nieuwe spelers" Grid.Column="1" Click="btn_nieuwe_spelers_Click" Style="{StaticResource ButtonStyle}"/>
         </Grid>
 </Window>
