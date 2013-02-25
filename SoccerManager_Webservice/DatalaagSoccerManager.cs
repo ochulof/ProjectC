@@ -6,20 +6,19 @@ using System.Data;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using Logging;
 
 namespace SoccerManager_Webservice
 {
     public class DatalaagSoccerManager
     {
+        private Logging.Logging LoggingService;
         private String strApplicationName = "DataAccessLayer";
 
         private SqlConnection cnSoccer;
         private SqlDataAdapter adpSoccer = new SqlDataAdapter();
         private SqlCommand cmdSoccer;
         private DataSet dsSoccer = new DataSet();
-      
-
         private SqlTransaction sqlTransaction;
 
         public String ConnectionString
@@ -36,6 +35,7 @@ namespace SoccerManager_Webservice
         }
         public DatalaagSoccerManager()
         {
+            LoggingService = new Logging.Logging(ConfigurationManager.AppSettings["LoggingPath"] + "WebService.log");
             CreateConnection();
         }
         private void Prepare_StoredProcedureCall(String strStoredProcedure)
@@ -81,6 +81,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -111,6 +112,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -134,6 +136,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -166,6 +169,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -190,7 +194,7 @@ namespace SoccerManager_Webservice
 
                 dsSoccer = null;
                 //Add additional logging
-                
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
             }
 
@@ -225,7 +229,7 @@ namespace SoccerManager_Webservice
 
                 dsSoccer = null;
                 //Add additional logging
-
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
             }
 
@@ -260,7 +264,7 @@ namespace SoccerManager_Webservice
 
                 if (sqlTransaction != null)
                     sqlTransaction.Rollback();
-
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 dsSoccer = null;
                 //Add additional logging
 
@@ -305,7 +309,7 @@ namespace SoccerManager_Webservice
 
                 dsSoccer = null;
                 //Add additional logging
-
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
             }
 
@@ -346,7 +350,7 @@ namespace SoccerManager_Webservice
 
                 dsSoccer = null;
                 //Add additional logging
-
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
             }
 
@@ -389,7 +393,7 @@ namespace SoccerManager_Webservice
 
                 dsSoccer = null;
                 //Add additional logging
-
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
             }
 
@@ -429,6 +433,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -458,6 +463,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -487,6 +493,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -517,6 +524,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -545,6 +553,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }
@@ -576,6 +585,7 @@ namespace SoccerManager_Webservice
             catch (SqlException ex)
             {
                 sqlTransaction.Rollback();
+                LoggingService.WriteLine(strApplicationName, ex.Message);
                 throw;
 
             }

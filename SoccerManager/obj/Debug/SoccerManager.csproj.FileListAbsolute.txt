@@ -80,3 +80,7 @@ C:\Users\wim\Documents\GitHub\ProjectC\SoccerManager\obj\Debug\SoccerManager.exe
 C:\Users\wim\Documents\GitHub\ProjectC\SoccerManager\obj\Debug\SoccerManager.pdb
 C:\Users\Stijn\Desktop\ProjectC\SoccerManager\obj\Debug\Styles.baml
 C:\Users\Stijn\Desktop\ProjectC\SoccerManager\obj\Debug\App.baml
+C:\databank\SoccerManager\obj\Debug\Styles.baml
+C:\databank\SoccerManager\obj\Debug\App.baml
+C:\databank\SoccerManager\bin\Debug\Logging.dll
+C:\databank\SoccerManager\bin\Debug\Logging.pdb

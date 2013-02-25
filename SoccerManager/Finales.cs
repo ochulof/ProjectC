@@ -14,9 +14,11 @@ namespace SoccerManager
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
         DataSet dsPouleA;
         DataSet dsPouleB;
-
+        private String strAppName = "Hoofdformulier";
+        private Logging.Logging LoggingService;
         public Finales()
         {
+            LoggingService = new Logging.Logging(1);
             InitializeComponent();
             maakWedstrijden();
             setLabels();
@@ -44,7 +46,7 @@ namespace SoccerManager
 
             wsSoccer.UpdateFinaleWedstrijden("1011", dsPouleA.Tables[0].Rows[5][0].ToString(),
                                                         dsPouleB.Tables[0].Rows[5][0].ToString(), "13:00");
-
+            LoggingService.WriteLine(strAppName,"De finales worden getoond" );
         }
 
         private void setLabels()
@@ -122,6 +124,7 @@ namespace SoccerManager
             }
             else if (optie.Equals("wedstrijdblad")) //als je het wedstrijdblad van deze wedstrijd wil afdrukken
             {
+                LoggingService.WriteLine(strAppName, "Het wedstrijdblad wordt afgeprint");
                 //printBlad();
             }
         }

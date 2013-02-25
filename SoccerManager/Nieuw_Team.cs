@@ -11,10 +11,12 @@ namespace SoccerManager
 {
     public partial class Nieuw_Team : Form
     {
+        private String strAppName = "formulier Nieuw_Team";
+        private Logging.Logging LoggingService;
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
-        DataSet dsSoccer;
         public Nieuw_Team()
         {
+            LoggingService = new Logging.Logging(1);
             InitializeComponent();
             
         }
@@ -31,10 +33,13 @@ namespace SoccerManager
 
                 wsSoccer.AddTeamGegevens(tb_team.Text, tb_verantwoordelijke.Text, tb_straat.Text, tb_postcode.Text, tb_plaats.Text, tb_tel.Text, tb_mail.Text);
                 wsSoccer.AddTeamNaam(tb_team.Text);
+                LoggingService.WriteLine(strAppName, "Een nieuw team is toegevoegd ");
             }
             else
+            {
+                LoggingService.WriteLine(strAppName, "Niet alle velden zijn correct ingevuld");
                 MessageBox.Show("Vul alle velden in!", "Foutmelding", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            }
         }
 
   

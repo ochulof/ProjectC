@@ -11,14 +11,15 @@ namespace SoccerManager
 {
     public partial class Wedstrijdschema : Form
     {
-
+        private String strAppName = "formulier Wedstrijdschema";
+        private Logging.Logging LoggingService;
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
         DataSet DsSoccer;
 
         public Wedstrijdschema()
         {
             InitializeComponent();
-
+            LoggingService = new Logging.Logging(1);
             vulGrid("");
         }
 
@@ -63,19 +64,34 @@ namespace SoccerManager
             if (cb_tespelen.Checked == true)
             {
                 if (cb_gespeeld.Checked == true)
+                {
                     vulGrid("");
+                    LoggingService.WriteLine(strAppName, "Alle wedstrijden worden getoond");
+                }
                 else
+                {
                     vulGrid("nee");
+                    LoggingService.WriteLine(strAppName, "Enkel de nog te spelen wedstrijden worden getoond");
+                }
             }
             else if (cb_gespeeld.Checked == true)
             {
                 if (cb_tespelen.Checked == true)
+                {
                     vulGrid("");
+                    LoggingService.WriteLine(strAppName, "Alle wedstrijden worden getoond");
+                }
                 else
+                {
                     vulGrid("ja");
+                    LoggingService.WriteLine(strAppName, "Enkel de gespeelde wedstrijden worden getoond");
+                }
             }
             else
+            {
                 vulGrid("niets");
+                LoggingService.WriteLine(strAppName, "Er wordt niets getoond");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

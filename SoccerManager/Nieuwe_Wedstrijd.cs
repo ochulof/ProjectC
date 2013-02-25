@@ -12,13 +12,15 @@ namespace SoccerManager
     public partial class Nieuwe_Wedstrijd : Form
     {
 
-
+        private String strAppName = "formulier Nieuwe_Wedstrijd";
+        private Logging.Logging LoggingService;
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
         DataSet dsTeamsThuis, dsTeamsUit;
 
 
         public Nieuwe_Wedstrijd()
         {
+            LoggingService = new Logging.Logging(1);
             InitializeComponent();
             
         }
@@ -29,8 +31,6 @@ namespace SoccerManager
         }
         private void voegTeamsToe()
         {
-            // dsTeamsThuis = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
-            //dsTeamsUit = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
             dsTeamsThuis = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
             dsTeamsUit = wsSoccer.SelectTeamNaamPerPoule(cb_poule.Text);
 
@@ -40,6 +40,7 @@ namespace SoccerManager
             this.cb_thuis.ValueMember = "naam";
             this.cb_uit.DisplayMember = "naam";
             this.cb_uit.ValueMember = "naam";
+            
         }
         private void btn_toevoegen_Click(object sender, EventArgs e)
         {
@@ -58,6 +59,7 @@ namespace SoccerManager
             if (!(wedstrijd[4].Equals("") || wedstrijd[5].Equals(""))) //programma crasht als er geen tijdstip wordt ingegeven
             {
                 wsSoccer.AddNieuweWedstrijd(wedstrijd[0], wedstrijd[1], wedstrijd[2], wedstrijd[3], wedstrijd[4], wedstrijd[5], wedstrijd[6], wedstrijd[7]);
+                LoggingService.WriteLine(strAppName, "Een nieuwe wedstrijd is toegevoegd");
             }
         }
     }

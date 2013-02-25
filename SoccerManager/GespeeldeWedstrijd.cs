@@ -20,12 +20,14 @@ namespace SoccerManager
         private System.Windows.Forms.Label[] labelThuis;
         private System.Windows.Forms.Label[] labelUit;
         int aantalThuis, aantalUit;
-
+        private String strAppName = "formulier GespeeldeWedstrijd";
+        private Logging.Logging LoggingService;
         public GespeeldeWedstrijd()
         {
             InitializeComponent();
             maakTabellen();
             setLabels();
+            LoggingService = new Logging.Logging(1);
         }
 
        
@@ -142,7 +144,7 @@ namespace SoccerManager
 
             //UPDATE WEDSTRIJDEN
             wsSoccer.UpdateWedstrijden(label1.Text, scoreThuis, scoreUit, tb_opmerking.Text);
-            
+            LoggingService.WriteLine(strAppName, "De wedstrijd wordt upgedate");
             //UPDATE TEAMS
             if (score_thuis.Value > score_uit.Value)
             {

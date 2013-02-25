@@ -14,8 +14,11 @@ namespace SoccerManager
         SoccerWebservice.SoccerManager_WebserviceSoapClient wsSoccer = new SoccerWebservice.SoccerManager_WebserviceSoapClient();
          public System.Windows.Forms.TextBox[] tekstvakken;
          DataSet dsSoccer;
+         private String strAppName = "formulier Nieuwe_Speler";
+         private Logging.Logging LoggingService;
         public Nieuwe_Speler()
         {
+            LoggingService = new Logging.Logging(1);
             InitializeComponent();
             voegTeamsToe();
              tekstvakken = new System.Windows.Forms.TextBox[20];
@@ -45,8 +48,12 @@ namespace SoccerManager
         {
             for (int i = 0; i < tekstvakken.Length - 2; i = i + 2)
             {
-                if (!tekstvakken[i].Text.Equals("") && !tekstvakken[i+1].Text.Equals("") )
+                if (!tekstvakken[i].Text.Equals("") && !tekstvakken[i + 1].Text.Equals(""))
+                {
                     wsSoccer.AddSpelerGegevens(tekstvakken[i].Text, tekstvakken[i + 1].Text, "test");
+                    LoggingService.WriteLine(strAppName, "Er is een nieuwe naam toegevoegd");
+                }
+                
             }
 
             

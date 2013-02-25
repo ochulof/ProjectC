@@ -6,7 +6,7 @@ using System.Web.Services;
 using System.Data;
 using System.Web.Services.Protocols;
 using System.Configuration;
-
+using Logging;
 namespace SoccerManager_Webservice
 {
     /// <summary>
@@ -20,7 +20,7 @@ namespace SoccerManager_Webservice
     public class SoccerManager_Webservice : System.Web.Services.WebService
     {
         private String strAppName = "SoccerManager Service";
-
+        private Logging.Logging LoggingService;
         private DatalaagSoccerManager DataAccess;
         
         
@@ -28,33 +28,29 @@ namespace SoccerManager_Webservice
         {
             try
             {
-                
+                LoggingService = new Logging.Logging(ConfigurationManager.AppSettings["LoggingPath"] + "WebService.log");
                 DataAccess = new DatalaagSoccerManager();
             }
             catch (Exception ex)
             {
-               
+                LoggingService.WriteLine(strAppName, ex.Message);
                 throw (ex);
             }
         }
 
-        [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-
+      
 
         [WebMethod]
         public bool AddSpelerGegevens(String voornaam, String naam, String team)
         {
             try
-            {
-                
+            {    
                 return DataAccess.AddSpelerGegevens(voornaam, naam, team);
+                
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -64,11 +60,11 @@ namespace SoccerManager_Webservice
         {
             try
             {
-
                 return DataAccess.AddTeamGegevens(naam,verantwoordelijke,straat_nr,postcode,plaats,telefoon,email);
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -83,6 +79,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -97,6 +94,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -110,7 +108,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-                
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
           
@@ -126,7 +124,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
 
@@ -142,7 +140,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
 
@@ -157,7 +155,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
 
@@ -173,7 +171,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
 
@@ -189,7 +187,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
-
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
 
@@ -205,6 +203,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -219,6 +218,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -233,6 +233,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -247,6 +248,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -261,6 +263,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }
@@ -275,6 +278,7 @@ namespace SoccerManager_Webservice
             }
             catch (Exception ex)
             {
+                LoggingService.WriteLine(strAppName, ex);
                 throw (ex);
             }
         }

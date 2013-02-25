@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace SoccerManager
 {
     /// <summary>
@@ -19,9 +20,12 @@ namespace SoccerManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        private String strAppName = "Hoofdformulier";
+        private Logging.Logging LoggingService;
         public Boolean ingelogd;
         public MainWindow()
         {
+            LoggingService = new Logging.Logging(1);
             InitializeComponent();
             setKnoppen();
         }
@@ -34,6 +38,7 @@ namespace SoccerManager
             if (nieuw.DialogResult.HasValue && nieuw.DialogResult.Value)
             {
                 Administrator.logIn();
+               
                 setKnoppen();
             }
        
@@ -153,6 +158,7 @@ namespace SoccerManager
         private void mnu_Help_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Hulp is onderweg");
+            LoggingService.WriteLine(strAppName, "Hulp knop werd geopend");
         }
     }
 
